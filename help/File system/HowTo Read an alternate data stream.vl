@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="QLeZOdA0NN0Lsnzw0bVjxC" LanguageVersion="2021.4.0.303" Version="0.128">
+  <NugetDependency Id="CVJsTS6jqz2PLwM8gtKEFj" Location="VL.CoreLib" Version="2021.4.0-0303-g4b58026559" />
+  <Patch Id="FAjvJCtgNLhQMLXKodGLex">
+    <Canvas Id="PMPzE4MVU7bPMNmneBoGF6" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="BzV7mHgoAmuPmM8XaoAOsV">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="NnYuyE5Arx1M5ROTadXlyS">
+        <Canvas Id="VJA1LiV87QPOT0H3VJoBpf" CanvasType="Group">
+          <Node Bounds="279,362,141,19" Id="FgY7rDGexJBOBKr2SHqTLr">
+            <p:NodeReference LastCategoryFullName="Blue.FileSystem" LastSymbolSource="VL.Blue.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="AlternateDataStreamReader" />
+            </p:NodeReference>
+            <Pin Id="A1THn9HvkVONCvx9zoU4Fw" Name="File Path" Kind="InputPin" />
+            <Pin Id="S8dvyYJGU8NPF9VOqbBeja" Name="Read" Kind="InputPin" />
+            <Pin Id="E8N9UGarMANP7RnBvaBi9S" Name="Output" Kind="OutputPin" />
+            <Pin Id="AA79cwKRMCHOw7wSj6rjbi" Name="Stream Name" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FofyjtDEGQbNMV72Nz8KlV" Comment="File Path" Bounds="94,281,84,15" ShowValueBox="true" isIOBox="true" Value="..\assets\streams.txt">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="91,362,63,19" Id="Brc5fEbUalbNRtpU3HlfwR">
+            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.CoreLib.IO.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FileReader (String)" />
+            </p:NodeReference>
+            <Pin Id="BQUfYoU4fojM6SgxOob94J" Name="File Path" Kind="InputPin" />
+            <Pin Id="LApiqe890ktPU6WHQC3x5W" Name="Encoding" Kind="InputPin" />
+            <Pin Id="KL7OtTn19wFLN1xF6IHqFD" Name="Read" Kind="InputPin" />
+            <Pin Id="D6BoT1dpj14Lc1CFuWNa4O" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="IM1XeqBaCJQLZJI65LlBiZ" Comment="Read" Bounds="151,320,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="P9UDG05yOjPNtTLIApxWZg" Comment="Read" Bounds="417,320,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="UaaEzM8BicFL70Z2BbHR48" Comment="" Bounds="93,413,165,23" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="IiWszxOn2RQML8jQeuI9DI" Comment="" Bounds="281,413,149,34" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="JSR0uXT7y3uPdcNaM9TNNf" Bounds="71,83,786,157" ShowValueBox="true" isIOBox="true" Value="NTFS has this feature called alternate data streams (ADS). This simply means that any file can have more than one data stream. &#xD;&#xA;&#xD;&#xA;You already know the &quot;normal&quot; data stream : this is just what shows up when you open say a text file in a text editor. ADS are hidden data stream that are not shown in the explorer. Their size is not reported there either!&#xD;&#xA;&#xD;&#xA;Have a look below : we created a text file that has some text in its regular data stream. But we also added something in the alternate data stream. You can double-check by opening this file in your regular text editor : it behaves just like any text file, and you would only see the regular stream.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AOhFKi9u6RjLVNJy80Tw7s" Comment="Stream Name" Bounds="450,413,40,34" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="Q45Y4LFOmdjPFH8NrFOzLH" Bounds="54,486,838,170" ShowValueBox="true" isIOBox="true" Value="To add an ADS to a regular text file, open a CMD a type the following :&#xD;&#xA;&#xD;&#xA;echo This is the hidden stream &gt; textfile.txt:alternatestream&#xD;&#xA;&#xD;&#xA;The filename:streamname syntax is how you add an ADS to a text file. In our example above, the ADS' name is &quot;hidden&quot; (can be anything)&#xD;&#xA;&#xD;&#xA;Well it's fun to add text in an ADS, but what if you stuffed a binary in there? This could fore sure be a way for an attacker to drop malicious content on a machine without getting noticed (at least by the user). Remember, the size of the ADS is not reported in the explorer, so one could easily overlook an actual malware that masquerades as a random stupid text file.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="190,761,141,19" Id="NHYSHGH394MPzBGG34zo1q">
+            <p:NodeReference LastCategoryFullName="Blue.FileSystem" LastSymbolSource="VL.Blue.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="AlternateDataStreamReader" />
+            </p:NodeReference>
+            <Pin Id="DfvjVDd0pMmQXUAbG6w8TC" Name="File Path" Kind="InputPin" />
+            <Pin Id="PpMEGj09rVGM2zuRxxlmNK" Name="Read" Kind="InputPin" />
+            <Pin Id="FIlUIwjSyHxOz3vr3dIBil" Name="Output" Kind="OutputPin" />
+            <Pin Id="AqEnPP9SscuQOg81tRcifu" Name="Stream Name" Kind="OutputPin" />
+          </Node>
+          <Pad Id="VYFvqBs8L3KQWEK9JUrKa9" Comment="File Path" Bounds="77,705,114,15" ShowValueBox="true" isIOBox="true" Value="..\assets\executable.txt">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="75,761,63,19" Id="JhpEtRu0drNNc9cmi6oFsu">
+            <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.CoreLib.IO.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FileReader (String)" />
+            </p:NodeReference>
+            <Pin Id="Boe7kXMinN5PuYspHmxeLV" Name="File Path" Kind="InputPin" />
+            <Pin Id="GwGN1lHvsnMQSFZPinbr6p" Name="Encoding" Kind="InputPin" />
+            <Pin Id="RGwpIZFjuD5NDK7BwGpChm" Name="Read" Kind="InputPin" />
+            <Pin Id="SyosVqZLle4P6N9XNg5gah" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="IhAGYdeFkCdNZLbMz8L1dD" Comment="Read" Bounds="135,742,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Am7BuolFOMEPpj7sdaONC5" Comment="Read" Bounds="328,742,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="NMmklvkR2qmPgXZuXeecBj" Comment="" Bounds="77,808,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SYmsUN3Mhy7MshPHagQ34b" Comment="" Bounds="192,805,197,54" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="GQCv9lxMF7aQUqWIIepco6" Bounds="561,696,314,176" ShowValueBox="true" isIOBox="true" Value="Empty text file, eh?&#xD;&#xA;&#xD;&#xA;Nope, we actually stuffed the BgInfo tool from sysinternals in there. If you open a cmd and run :&#xD;&#xA;&#xD;&#xA;wmic process call create '&lt;path_to_the_file:datastreamname&gt;'&#xD;&#xA;&#xD;&#xA;You would actually see BgInfo running!">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KZ3TaGEjsdjQONALnX6GCa" Comment="Stream Name" Bounds="399,806,58,34" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+        </Canvas>
+        <Patch Id="P5dyCkmpbDOMxBzJJAb8bb" Name="Create" />
+        <Patch Id="CeCVb2GdsjoOBpCX6VL0Pf" Name="Update" />
+        <!--
+
+    ************************  ************************
+
+-->
+        <ProcessDefinition Id="VtRRUk36VJgPHdSj7UDYmi">
+          <Fragment Id="RiPGOFEkqO0MAQoHsukgDy" Patch="P5dyCkmpbDOMxBzJJAb8bb" Enabled="true" />
+          <Fragment Id="QG0pl3NXfoiLg8OdnhCNo4" Patch="CeCVb2GdsjoOBpCX6VL0Pf" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="T3zP0FT2NTVLtNyd0n6NNn" Ids="FofyjtDEGQbNMV72Nz8KlV,A1THn9HvkVONCvx9zoU4Fw" />
+        <Link Id="GrDs17328POMbV4n9EbuYU" Ids="FofyjtDEGQbNMV72Nz8KlV,BQUfYoU4fojM6SgxOob94J" />
+        <Link Id="CMbXYe69ZWRPbyQblMk05P" Ids="IM1XeqBaCJQLZJI65LlBiZ,KL7OtTn19wFLN1xF6IHqFD" />
+        <Link Id="BUpePM2EPzxQNMpBfgU1Z4" Ids="P9UDG05yOjPNtTLIApxWZg,S8dvyYJGU8NPF9VOqbBeja" />
+        <Link Id="HOUEeoaObdjPgZ1EDetXsg" Ids="D6BoT1dpj14Lc1CFuWNa4O,UaaEzM8BicFL70Z2BbHR48" />
+        <Link Id="UgWN79lQazRLxxQOD143EI" Ids="E8N9UGarMANP7RnBvaBi9S,IiWszxOn2RQML8jQeuI9DI" />
+        <Link Id="SHJS2iNCZ9hOeCBOuToY6a" Ids="AA79cwKRMCHOw7wSj6rjbi,AOhFKi9u6RjLVNJy80Tw7s" />
+        <Link Id="Ka1A78rLKSlMVdif1iYLbv" Ids="VYFvqBs8L3KQWEK9JUrKa9,DfvjVDd0pMmQXUAbG6w8TC" />
+        <Link Id="HbCXT4BNFutM3mqSHo4hHv" Ids="VYFvqBs8L3KQWEK9JUrKa9,Boe7kXMinN5PuYspHmxeLV" />
+        <Link Id="ULFnuqSJklxMcj8ea1BI85" Ids="IhAGYdeFkCdNZLbMz8L1dD,RGwpIZFjuD5NDK7BwGpChm" />
+        <Link Id="RjJjxjim3tuMJNWnt849ax" Ids="Am7BuolFOMEPpj7sdaONC5,PpMEGj09rVGM2zuRxxlmNK" />
+        <Link Id="EC4gQCdXBixNMaLQDkZVog" Ids="SyosVqZLle4P6N9XNg5gah,NMmklvkR2qmPgXZuXeecBj" />
+        <Link Id="BzQXRN928AVLj9d97kkttm" Ids="FIlUIwjSyHxOz3vr3dIBil,SYmsUN3Mhy7MshPHagQ34b" />
+        <Link Id="AtuYAAHCzZQPuRMG1QnZW5" Ids="AqEnPP9SscuQOg81tRcifu,KZ3TaGEjsdjQONALnX6GCa" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="SIF5Q6Zof63M3FuVutbpjP" Location="VL.CoreLib" Version="2021.4.0-0303-g4b58026559" />
+  <NugetDependency Id="RaxgH9uWM9AQaywjNVKZd4" Location="VL.Blue" Version="0.0.0.0" />
+</Document>
