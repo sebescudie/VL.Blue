@@ -8,4 +8,4 @@ Might not be updated regularly!
 
 ### File system
 
-- Reading [alternate data streams](https://blog.malwarebytes.com/101/2015/07/introduction-to-alternate-data-streams/)
+- Reading [alternate data streams](https://blog.malwarebytes.com/101/2015/07/introduction-to-alternate-data-streams/), using [Trinet.Core.IO.Ntfs](https://github.com/RichardD2/NTFS-Streams)
