@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="ItbzroA06XpOzgSkGOBS0c" LanguageVersion="2021.4.0.303" Version="0.128">
-  <NugetDependency Id="TNQQodoeTIVOFqPalAxzLl" Location="VL.CoreLib" Version="2021.4.0-0303-g4b58026559" />
+<Document xmlns:p="property" Id="ItbzroA06XpOzgSkGOBS0c" LanguageVersion="2021.3.3.131" Version="0.128">
+  <NugetDependency Id="TNQQodoeTIVOFqPalAxzLl" Location="VL.CoreLib" Version="2021.3.3" />
   <Patch Id="GNkwL2ssMHEPRZfg8ey1K7">
     <Canvas Id="VclDbfBVE3jOiM6pVs3UX7" DefaultCategory="Blue" CanvasType="FullCategory">
       <Canvas Id="ONokeHYSTevPWAYG52Cemb" Name="FileSystem" Position="232,223">
@@ -164,7 +164,7 @@
             <Patch Id="EbbsbXkgNk4MDqvgq1mGg2" Name="Update" ManuallySortedPins="true">
               <Pin Id="NPwAUbsaMW5N0fssbASWu8" Name="Output" Kind="OutputPin" Bounds="611,941" />
               <Pin Id="ISCzB4IYNz2LpXtoiL5b00" Name="Stream Name" Kind="OutputPin" Bounds="423,938" />
-              <Pin Id="MJMj2gcNdOXO2vtQxJ0Yfr" Name="File Path" Kind="InputPin" Bounds="338,393">
+              <Pin Id="MJMj2gcNdOXO2vtQxJ0Yfr" Name="File Path" Kind="InputPin" Bounds="338,393" DefaultValue="">
                 <p:TypeAnnotation>
                   <Choice Kind="TypeFlag" Name="Path" />
                 </p:TypeAnnotation>
@@ -193,6 +193,885 @@
             <Link Id="H7rqMDnt7f2MUL8BS5DuXf" Ids="OIaZ13q6a2WM1oTKR0a0Il,UjCZAF6UtoKLSUgeXjKFXe" />
           </Patch>
         </Node>
+        <Canvas Id="SH0hJaLkKpdNVqwNlQqQSo" Name="Shortcut" Position="556,427">
+          <!--
+
+    ************************ ShortcutReader ************************
+
+-->
+          <Node Name="ShortcutReader" Bounds="418,294" Id="Hi6mEuYGEK9PBdw7MHHaic" Summary="Outputs basic information from a .lnk file, as well as an LnkFile object for further processing" Remarks="Path is of type string, because if you provide a Path to the .lnk, windows automagically loads the source file and not the .lnk itself">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="ContainerDefinition" Name="Process" />
+            </p:NodeReference>
+            <Patch Id="MnLM0ViYmH8MKeaG7xCBGL">
+              <Canvas Id="Fog7y7RPiGNLf55ZbIeVE7" CanvasType="Group">
+                <Node Bounds="224,414,657,486" Id="UsHrbab267WP27IM2BKznN">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="D1UNpLbuilmLtCBQQCU85e" Name="Force" Kind="InputPin" />
+                  <Pin Id="MTbWilZvbxGOSQOMktg7dq" Name="Dispose Cached Outputs" Kind="InputPin" />
+                  <Pin Id="IsMB7Ub4ysuPtT81OKVUlT" Name="Has Changed" Kind="OutputPin" />
+                  <ControlPoint Id="DSjFlQvWNdJMPrEjv5y7aa" Bounds="334,894" Alignment="Bottom" />
+                  <ControlPoint Id="GR1j5X4ZAPMOSat0bFd9Rd" Bounds="398,894" Alignment="Bottom" />
+                  <ControlPoint Id="VddbxPmK6zXPoLGgTUwsJ6" Bounds="462,894" Alignment="Bottom" />
+                  <ControlPoint Id="DalZRlPb9EiNlkvPfHkHNO" Bounds="526,894" Alignment="Bottom" />
+                  <ControlPoint Id="GT3O8FvD4AoLha9Mjro6iP" Bounds="590,894" Alignment="Bottom" />
+                  <ControlPoint Id="HwH64PPlI67MYoGPOVQlwx" Bounds="654,894" Alignment="Bottom" />
+                  <ControlPoint Id="G9ZfR5hQpWlNEg3dt8DaXh" Bounds="866,894" Alignment="Bottom" />
+                  <Patch Id="Nyrsa7mQaYINZ81QIUzhd6" ManuallySortedPins="true">
+                    <Patch Id="LojD78Ln76dPz8c8oHeayT" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="KpfugE6wz5UPflbL8RVjGp" Name="Then" ManuallySortedPins="true" />
+                    <Node Bounds="332,434,537,398" Id="ImQSuP1Z17HLtdgJNtTS74">
+                      <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.Experimental.vl">
+                        <Choice Kind="ProcessAppFlag" Name="TryCatch (2Outputs)" />
+                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                      </p:NodeReference>
+                      <Pin Id="OJkD4GSb4ehOnONeujfmtD" Name="Output 1" Kind="OutputPin" />
+                      <Pin Id="B8Jsj35G8EgNlEd4WQa28g" Name="Output 2" Kind="OutputPin" />
+                      <Patch Id="EBrwv9fzIXePYR7klSLYlg" ManuallySortedPins="true">
+                        <Patch Id="UVRIV9QSlwENR830RYQCax" Name="Create" ManuallySortedPins="true" />
+                        <Patch Id="VEqHjb1J6OUMOSk5MCSHKo" Name="Try" ManuallySortedPins="true">
+                          <Pin Id="Ec2GcI6ahgzOUeUmReDR7s" Name="Output 1" Kind="OutputPin" />
+                          <Pin Id="IQ16xuxfyMDQd5VZZsxHZQ" Name="Output 2" Kind="OutputPin" />
+                        </Patch>
+                        <Patch Id="SSYR1jNkdoaNpA6Zerhfnk" Name="Catch" ManuallySortedPins="true">
+                          <Pin Id="DgSvKGjdZy5QEP2a1jSoi5" Name="Input 1" Kind="InputPin" />
+                          <Pin Id="TPhg4iCGTeHP4HH4PXtbu9" Name="Output 1" Kind="OutputPin" />
+                          <Pin Id="D2NMqRi0BJuPJPXXPSMHYk" Name="Output 2" Kind="OutputPin" />
+                        </Patch>
+                        <ControlPoint Id="CZKWWxjLEtbMYjsczKpwoq" Bounds="346,823" />
+                        <ControlPoint Id="PQ6HlGpYLqjMQoTEPpZ1A0" Bounds="421,823" />
+                        <ControlPoint Id="RupDbNTasbVO51P6cvSR64" Bounds="719,591" />
+                        <ControlPoint Id="AfWmOrRfuBVNb4qCWwqtm6" Bounds="659,825" />
+                        <ControlPoint Id="BrhnEUHpravLZlpp3nzi1J" Bounds="776,806" />
+                        <Node Bounds="344,757,290,26" Id="BfvlVwoNzbfMFJ1f1VCvqt">
+                          <p:NodeReference>
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="RecordType" Name="ShortcutReaderResult" />
+                            <Choice Kind="OperationCallFlag" Name="Create" />
+                          </p:NodeReference>
+                          <Pin Id="TvvMkP57w4lLWspBNaoOQm" Name="Lnk File" Kind="InputPin" />
+                          <Pin Id="TDeevmaLHkrOcjRN1PoJbn" Name="Target File Path" Kind="InputPin" />
+                          <Pin Id="V3f7IS8zNsJO3llZ1kEmPe" Name="Target Creation Date" Kind="InputPin" />
+                          <Pin Id="HCaWcQ3SOl7NLn4MtpjPGn" Name="Target Last Access Date" Kind="InputPin" />
+                          <Pin Id="Isx39WODZdRLdKP61Hpsnd" Name="Target Modification Date" Kind="InputPin" />
+                          <Pin Id="HnXuWKSNS59LjUAIxCGZAF" Name="Target File Size" Kind="InputPin" />
+                          <Pin Id="STAdZ31H2OZMYdA4OrUqGg" Name="Output" Kind="StateOutputPin" />
+                        </Node>
+                        <Node Bounds="344,457,54,19" Id="Scmf94b4oUhM3IbBWeSPi6">
+                          <p:NodeReference LastCategoryFullName="Lnk.Lnk" LastSymbolSource="Lnk.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="LoadFile" />
+                          </p:NodeReference>
+                          <Pin Id="DBBzthFHS22OlGz5YFQr75" Name="Lnk File" Kind="InputPin" />
+                          <Pin Id="KghUqNcvbXbNyHundq4b4Y" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="344,494,59,26" Id="KVm3vL7iTKNOiNmAxGbs2V">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.LnkFile" LastSymbolSource="VL.Blue.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="LocalPath" />
+                          </p:NodeReference>
+                          <Pin Id="RnpTNr3JAkBLgLccuKrGcP" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="OZIzf5P1U33OhY2h5rKnM1" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="JpU0G8Dtv0tMzx0sq6a0iZ" Name="Local Path" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="401,546,48,19" Id="VQnGpsG8fW7OMM62Z4xrGm">
+                          <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="ToPath" />
+                          </p:NodeReference>
+                          <Pin Id="Uewo9mFHp6ANiVIcSgGbf4" Name="Input" Kind="InputPin" />
+                          <Pin Id="M5qR9J5TZeIPaeeMLtwUmd" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="443,494,49,26" Id="FguVn7Cy8MAPq5j0cH8npS">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.LnkFile" LastSymbolSource="VL.Blue.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="Header" />
+                          </p:NodeReference>
+                          <Pin Id="P7sDujCnqdVP3lEu49l7gH" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="PoE7J7SEFYDLRBxitOdtu4" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="KCnR80yaVfoPCGNIE4ZeDt" Name="Header" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="487,540,105,26" Id="HwxeARhY5ycPbzVtwv4kO6">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastSymbolSource="VL.Blue.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="TargetCreationDate" />
+                          </p:NodeReference>
+                          <Pin Id="CdifORoPoHVNQkIkyhXXsq" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="Jk3fTTYAR4OPWzL51rj9t6" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="HT2rnEgE3odNCWtqfLJbNx" Name="Target Creation Date" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="487,583,127,26" Id="Mo9bBIA9monLbILIRzKPvo">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastSymbolSource="VL.Blue.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="TargetLastAccessedDate" />
+                          </p:NodeReference>
+                          <Pin Id="PosTzrmYe7BQVeBXU3us7L" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="GvyR7uRv0ifO2D6tXNuAyq" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="NmvqJwiK2eZP5cH4b5fsYB" Name="Target Last Accessed Date" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="487,622,123,26" Id="LcVIWpvvXU9OMLlLWumIfb">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastSymbolSource="VL.Blue.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="TargetModificationDate" />
+                          </p:NodeReference>
+                          <Pin Id="Lz1RjyFAcjUO4U0mvQk73o" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="Tk1pRyjrhesMUd8b2ctU9g" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="DIrWboBqulcOxsqSyoZUBM" Name="Target Modification Date" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="487,658,50,26" Id="IbVa45W5ZB1MF0EnjETXp5">
+                          <p:NodeReference LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="FileSize" />
+                            <CategoryReference Kind="AssemblyCategory" Name="Header" NeedsToBeDirectParent="true" />
+                          </p:NodeReference>
+                          <Pin Id="GqFchzpM0izNTtYUWz3RhH" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="CB0hnMa5yYZQW2imCjz62m" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="RQflfncopoOPBbf0SRSk8G" Name="File Size" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="629,721,52,19" Id="IBainIY7mZ7QUNvt5fa8Kc">
+                          <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="ToInt32" />
+                          </p:NodeReference>
+                          <Pin Id="NflSMiwyWoXPtp3cHSP4ld" Name="Input" Kind="InputPin" />
+                          <Pin Id="OcOUqjuN2DjOfCbGwax0tL" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Pad Id="AljluiHKvbnMZLbU1Nw9dU" Bounds="421,797,35,15" ShowValueBox="true" isIOBox="true" Value="Ok">
+                          <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="TypeFlag" Name="String" />
+                          </p:TypeAnnotation>
+                        </Pad>
+                        <Node Bounds="722,626,55,26" Id="IGXyGrHhYeXN4x31mBHwDu">
+                          <p:NodeReference LastCategoryFullName="Primitive.Exception" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="ClassType" Name="Exception" />
+                            <Choice Kind="OperationCallFlag" Name="Message" />
+                          </p:NodeReference>
+                          <Pin Id="EM82YwzJAu9OrhzMo0dX0q" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="KIbu794bRJOP3wls6VEkqR" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="QKa1v9tkrukLrSzq0qRJBF" Name="Message" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="799,712,58,26" Id="Rmw8MCxVH96LrgvwzqCRC9">
+                          <p:NodeReference LastCategoryFullName="System.Console" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="WriteLine" />
+                            <CategoryReference Kind="ClassType" Name="Console" NeedsToBeDirectParent="true" />
+                          </p:NodeReference>
+                          <Pin Id="J7DIHfoFlvXN6chclN4zp4" Name="Value" Kind="InputPin" />
+                          <Pin Id="HywJxFXDQvmMM0vf6OxEIs" Name="Apply" Kind="InputPin" DefaultValue="True">
+                            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                              <Choice Kind="TypeFlag" Name="Boolean" />
+                            </p:TypeAnnotation>
+                          </Pin>
+                        </Node>
+                      </Patch>
+                    </Node>
+                    <Node Bounds="332,851,325,26" Id="HwpAgACs0PPMtHzyRWqztI">
+                      <p:NodeReference>
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="RecordType" Name="ShortcutReaderResult" />
+                        <Choice Kind="OperationCallFlag" Name="Split" />
+                      </p:NodeReference>
+                      <Pin Id="VQdg2Hkd63ULjOMhZDKqxG" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="JcqvtroNVa3QJmUvD771vN" Name="Lnk File" Kind="OutputPin" />
+                      <Pin Id="MYtPfi173cnOU8xRBgzFzF" Name="Target File Path" Kind="OutputPin" />
+                      <Pin Id="A5cF7ynG7lpNSrLSAHSgbo" Name="Target Creation Date" Kind="OutputPin" />
+                      <Pin Id="Eo4Y5889B4iOJe3nsjI5uE" Name="Target Last Access Date" Kind="OutputPin" />
+                      <Pin Id="Ljl1X4A6xlZPtPXVg0KxOK" Name="Target Modification Date" Kind="OutputPin" />
+                      <Pin Id="DsuWnCM57ccPlG7N7nrB6K" Name="Target File Size" Kind="OutputPin" />
+                    </Node>
+                  </Patch>
+                </Node>
+                <ControlPoint Id="Th853p3kUrdLpB2mXhZf7v" Bounds="346,387" />
+                <ControlPoint Id="UzGsPkHFZR9PPTvRHVQEVI" Bounds="224,392" />
+                <ControlPoint Id="RgsvoUZ4ZEXMih5PKf6sBx" Bounds="334,954" />
+                <ControlPoint Id="JyoYSMZ8PFhQW3GmeTZast" Bounds="398,963" />
+                <ControlPoint Id="PnjP02AJDsiNjsqgWBXLBD" Bounds="462,981" />
+                <ControlPoint Id="U8AFnzjqkIML9VuNTfbgW6" Bounds="525,1000" />
+                <ControlPoint Id="DFDo0eoXCyjMO1Rj3OQuRV" Bounds="590,1018" />
+                <ControlPoint Id="DjYkfSYex3iLOQ38zkBqVg" Bounds="654,1037" />
+                <ControlPoint Id="K8byowlJsfMMe7ahF9RTxV" Bounds="866,933" />
+                <Pad Id="BF3JVrlVwvdPfmJSBCs7uS" Comment="Dispose Cached Outputs" Bounds="868,358,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </p:TypeAnnotation>
+                  <p:ValueBoxSettings>
+                    <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+                  </p:ValueBoxSettings>
+                </Pad>
+              </Canvas>
+              <Patch Id="FphvaXVS8nDPAGlYLnABTz" Name="Create" />
+              <Patch Id="MBP71Od5qnlLgbgxP2Eq2O" Name="Update" ManuallySortedPins="true">
+                <Pin Id="Q5LByBF2rllMxXgDWadWj2" Name="Path" Kind="InputPin" Bounds="383,321" Summary="The .lnk file to inspect" />
+                <Pin Id="LuSa1EOoRXZN2SSjaLwbKr" Name="Read" Kind="InputPin" Bounds="550,372" Summary="Reads the supplied .lnk file" />
+                <Pin Id="PJqjRiMoHEsNVO2bt238Gc" Name="Result" Kind="OutputPin" Bounds="249,1002" Summary="An LnkFile object for further processing">
+                  <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+                    <Choice Kind="TypeFlag" Name="LnkFile" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="DtO4acajWWXPoEAiK4O4Pw" Name="Target File Path" Kind="OutputPin" Bounds="340,1017" Summary="Path to the shortcut's target file" />
+                <Pin Id="S7NxStPHX03Py3X7kJOFTf" Name="Target Creation Date" Kind="OutputPin" Bounds="438,1010" Summary="UTC datetime when the shortcut's target file was created" />
+                <Pin Id="CflXjyzQBSwM8RQTA9Rvdr" Name="Target Last Access Date" Kind="OutputPin" Bounds="594,1022" Summary="UTC datetime when the shortcut's target file was last accessed" />
+                <Pin Id="PmA6Et40gCEOaUf3PYYM8n" Name="Target Modification Date" Kind="OutputPin" Bounds="591,974" Summary="UTC datetime when the shortcut's target file was last modified" />
+                <Pin Id="KZy0ievGe7EOROiVqPUul2" Name="Target File Size" Kind="OutputPin" Bounds="658,939" Summary="Filesize of the shortcut's target file" />
+                <Pin Id="VSmaJNKK4KGMBKsAUuO94g" Name="Status" Kind="OutputPin" Bounds="826,1052" Summary="Parser status" />
+              </Patch>
+              <ProcessDefinition Id="BG1SI18kZgiQD76cJYyR1f">
+                <Fragment Id="DPfPiWESANqMCbWfp2WPoE" Patch="FphvaXVS8nDPAGlYLnABTz" Enabled="true" />
+                <Fragment Id="QG6RkKjR8m1LUz2GagtsoA" Patch="MBP71Od5qnlLgbgxP2Eq2O" Enabled="true" />
+              </ProcessDefinition>
+              <Link Id="DphABsuH8xWM06PXeEzAn7" Ids="Q5LByBF2rllMxXgDWadWj2,Th853p3kUrdLpB2mXhZf7v" IsHidden="true" />
+              <Link Id="DaIE3llbtISNjQoFvBeXbp" Ids="UzGsPkHFZR9PPTvRHVQEVI,D1UNpLbuilmLtCBQQCU85e" />
+              <Link Id="DcBjemhwnP7NHa4Y9ZjRo8" Ids="LuSa1EOoRXZN2SSjaLwbKr,UzGsPkHFZR9PPTvRHVQEVI" IsHidden="true" />
+              <Link Id="Aomn1l66tnzMLzwNcnRCnj" Ids="CZKWWxjLEtbMYjsczKpwoq,Ec2GcI6ahgzOUeUmReDR7s" IsHidden="true" />
+              <Link Id="BKODZYDrAjvLXCkqahmhNT" Ids="PQ6HlGpYLqjMQoTEPpZ1A0,IQ16xuxfyMDQd5VZZsxHZQ" IsHidden="true" />
+              <Link Id="KtC75j6L7sKMqLpDrIDl5E" Ids="DgSvKGjdZy5QEP2a1jSoi5,RupDbNTasbVO51P6cvSR64" IsHidden="true" />
+              <Link Id="Q9GL4J9ywL9QQEwmNs4nh6" Ids="AfWmOrRfuBVNb4qCWwqtm6,TPhg4iCGTeHP4HH4PXtbu9" IsHidden="true" />
+              <Link Id="K79jrK1X5DLLlK6zXfIxBF" Ids="BrhnEUHpravLZlpp3nzi1J,D2NMqRi0BJuPJPXXPSMHYk" IsHidden="true" />
+              <Link Id="HSY6rioJYuIPtM8ypZvmf9" Ids="STAdZ31H2OZMYdA4OrUqGg,CZKWWxjLEtbMYjsczKpwoq" />
+              <Link Id="J6GcHOj4nuZOzaHCSiUzDp" Ids="Th853p3kUrdLpB2mXhZf7v,DBBzthFHS22OlGz5YFQr75" />
+              <Link Id="T8RWu8DpKFAPWhhW9HQINd" Ids="KghUqNcvbXbNyHundq4b4Y,RnpTNr3JAkBLgLccuKrGcP" />
+              <Link Id="QthhXsJE265MWfiGlPp853" Ids="JpU0G8Dtv0tMzx0sq6a0iZ,Uewo9mFHp6ANiVIcSgGbf4" />
+              <Link Id="N7rsVfhHzuhMc2ucsVN2zk" Ids="M5qR9J5TZeIPaeeMLtwUmd,TDeevmaLHkrOcjRN1PoJbn" />
+              <Link Id="GBKXYjSnD6gOjGDLneIseQ" Ids="OZIzf5P1U33OhY2h5rKnM1,TvvMkP57w4lLWspBNaoOQm" />
+              <Link Id="EGdbpdGm0l3LmsTIArWVrH" Ids="KghUqNcvbXbNyHundq4b4Y,P7sDujCnqdVP3lEu49l7gH" />
+              <Link Id="Ct6DOk2EvPqPrtqIQa5TNh" Ids="KCnR80yaVfoPCGNIE4ZeDt,CdifORoPoHVNQkIkyhXXsq" />
+              <Link Id="G6GYjwwOIPwMdto8lDMI8u" Ids="HT2rnEgE3odNCWtqfLJbNx,V3f7IS8zNsJO3llZ1kEmPe" />
+              <Link Id="G6709FYGyStOn4qPedCux4" Ids="NmvqJwiK2eZP5cH4b5fsYB,HCaWcQ3SOl7NLn4MtpjPGn" />
+              <Link Id="M6qlYbhaPTZM9FOlzCL3Tt" Ids="Jk3fTTYAR4OPWzL51rj9t6,PosTzrmYe7BQVeBXU3us7L" />
+              <Link Id="AvZbdCxUMuBNgqN0nhNXI7" Ids="GvyR7uRv0ifO2D6tXNuAyq,Lz1RjyFAcjUO4U0mvQk73o" />
+              <Link Id="E9D1IJDPiG2OtzzeMBT6hH" Ids="DIrWboBqulcOxsqSyoZUBM,Isx39WODZdRLdKP61Hpsnd" />
+              <Link Id="Ksn4Gw2HywyNZEbzrAq7vL" Ids="Tk1pRyjrhesMUd8b2ctU9g,GqFchzpM0izNTtYUWz3RhH" />
+              <Link Id="PofNGSokAVQOScuAoX7cKV" Ids="RQflfncopoOPBbf0SRSk8G,NflSMiwyWoXPtp3cHSP4ld" />
+              <Link Id="ETGIozuXV6ZOqsGRypeXHN" Ids="OcOUqjuN2DjOfCbGwax0tL,HnXuWKSNS59LjUAIxCGZAF" />
+              <Link Id="JRv9DGWuLK5QbCNH8nJofA" Ids="AljluiHKvbnMZLbU1Nw9dU,PQ6HlGpYLqjMQoTEPpZ1A0" />
+              <Link Id="Jyb7lMovr7IOXgSRJhHNRw" Ids="RupDbNTasbVO51P6cvSR64,EM82YwzJAu9OrhzMo0dX0q" />
+              <Link Id="Iz6HskdLhJcOw4Jm3VXbqI" Ids="QKa1v9tkrukLrSzq0qRJBF,BrhnEUHpravLZlpp3nzi1J" />
+              <Link Id="OJLa1QhWxYXL6zbhIC7uol" Ids="OJkD4GSb4ehOnONeujfmtD,VQdg2Hkd63ULjOMhZDKqxG" />
+              <Link Id="Unxq84LfZuPPdFf2hXamA7" Ids="JcqvtroNVa3QJmUvD771vN,DSjFlQvWNdJMPrEjv5y7aa" />
+              <Link Id="LzJhVKZBBBDO33U8s9ykLS" Ids="DSjFlQvWNdJMPrEjv5y7aa,RgsvoUZ4ZEXMih5PKf6sBx" />
+              <Link Id="NUCLBubgXZrPYFiSlWN0qB" Ids="RgsvoUZ4ZEXMih5PKf6sBx,PJqjRiMoHEsNVO2bt238Gc" IsHidden="true" />
+              <Link Id="TjykrS5FgH1MQK80N3gCJL" Ids="MYtPfi173cnOU8xRBgzFzF,GR1j5X4ZAPMOSat0bFd9Rd" />
+              <Link Id="HySsgY735F0MzN217MecLY" Ids="GR1j5X4ZAPMOSat0bFd9Rd,JyoYSMZ8PFhQW3GmeTZast" />
+              <Link Id="IWqLNihNfG2PoSOrju4xJr" Ids="JyoYSMZ8PFhQW3GmeTZast,DtO4acajWWXPoEAiK4O4Pw" IsHidden="true" />
+              <Link Id="LHQhmThKrZtODV5gp54CUP" Ids="A5cF7ynG7lpNSrLSAHSgbo,VddbxPmK6zXPoLGgTUwsJ6" />
+              <Link Id="IrbD4PHuROENBd5B0u638M" Ids="VddbxPmK6zXPoLGgTUwsJ6,PnjP02AJDsiNjsqgWBXLBD" />
+              <Link Id="UCmy01d0bV8M2QyZBjScV7" Ids="PnjP02AJDsiNjsqgWBXLBD,S7NxStPHX03Py3X7kJOFTf" IsHidden="true" />
+              <Link Id="Alkc91o2CT4QTLBoI6D6Br" Ids="Eo4Y5889B4iOJe3nsjI5uE,DalZRlPb9EiNlkvPfHkHNO" />
+              <Link Id="UdcWtxMq3P3QcWVxkqLgM9" Ids="DalZRlPb9EiNlkvPfHkHNO,U8AFnzjqkIML9VuNTfbgW6" />
+              <Link Id="OrZt6bPAkuIPLsWaeWbvqt" Ids="U8AFnzjqkIML9VuNTfbgW6,CflXjyzQBSwM8RQTA9Rvdr" IsHidden="true" />
+              <Link Id="OvPz3x6q3cwQJuhUuPbTQb" Ids="Ljl1X4A6xlZPtPXVg0KxOK,GT3O8FvD4AoLha9Mjro6iP" />
+              <Link Id="RvL98YacXGxPcXE4MUbNqz" Ids="GT3O8FvD4AoLha9Mjro6iP,DFDo0eoXCyjMO1Rj3OQuRV" />
+              <Link Id="DtVTwy1pnWSMI8sTE3A4j4" Ids="DFDo0eoXCyjMO1Rj3OQuRV,PmA6Et40gCEOaUf3PYYM8n" IsHidden="true" />
+              <Link Id="KVTxj5YrAlCLx5NCW3Olqd" Ids="DsuWnCM57ccPlG7N7nrB6K,HwH64PPlI67MYoGPOVQlwx" />
+              <Link Id="FWV0AM80mhUPKbM9Trn1hZ" Ids="HwH64PPlI67MYoGPOVQlwx,DjYkfSYex3iLOQ38zkBqVg" />
+              <Link Id="LNMbLkVz3QZLGGUuS0JzQy" Ids="DjYkfSYex3iLOQ38zkBqVg,KZy0ievGe7EOROiVqPUul2" IsHidden="true" />
+              <Link Id="Ecw15YOOkjQPJCRj3GISz1" Ids="B8Jsj35G8EgNlEd4WQa28g,G9ZfR5hQpWlNEg3dt8DaXh" />
+              <Link Id="GinCP1TJIVGMJP8XSd2vmN" Ids="G9ZfR5hQpWlNEg3dt8DaXh,K8byowlJsfMMe7ahF9RTxV" />
+              <Link Id="OsrsjQfCbFKOdlZlkZrkjx" Ids="K8byowlJsfMMe7ahF9RTxV,VSmaJNKK4KGMBKsAUuO94g" IsHidden="true" />
+              <Link Id="HC3RaEKnv4RLec8F8RGWCo" Ids="QKa1v9tkrukLrSzq0qRJBF,J7DIHfoFlvXN6chclN4zp4" />
+              <Link Id="TF0YXXm5NbXP0ZRYNVTmHx" Ids="BF3JVrlVwvdPfmJSBCs7uS,MTbWilZvbxGOSQOMktg7dq" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ShortcutReaderResult ************************
+
+-->
+          <Node Name="ShortcutReaderResult" Aspects="Internal" Bounds="474,350" Id="BWsGJxaCv1HLeKCIPs7fpo">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="RecordDefinition" Name="Record" />
+            </p:NodeReference>
+            <Patch Id="A4BHy0utPMzPClIK9gUAkW">
+              <Canvas Id="Mpw0UhWGcb9MqbYveWf9SZ" CanvasType="Group">
+                <Pad Id="RUSUWqJbvjhOC0RfH41JdD" SlotId="MqbmrhkqQetOM0Dkruj9ND" Bounds="477,364" />
+                <Pad Id="AA3LAOTgVlJLIG9kT9Yg7X" SlotId="D9IRhGZa4TSQFx9l0de294" Bounds="580,364" />
+                <Pad Id="RPhqu3hGamwMakwkk4HDEW" SlotId="PacAaM9dJd0QTsCgxwSqDG" Bounds="704,364" />
+                <Pad Id="MFEfTO1iYp2LX863xK3G1Z" SlotId="OUmXKLTeTZUQIqitfvj9yO" Bounds="847,364" />
+                <Pad Id="FJ000e98QkmQKDdNszT04F" SlotId="R68G73vBOJhLA4KCT7U5xj" Bounds="1036,364" />
+                <Pad Id="B03638dztdRQMazhldK8YI" SlotId="GK5PMEbAIF8LMpjQakdZ59" Bounds="1196,364" />
+                <ControlPoint Id="GNof9RdPJyTQJ9KMRZKLam" Bounds="477,334" />
+                <ControlPoint Id="J7Y7D4Qk4BHOo52iuknfUL" Bounds="477,394" />
+                <ControlPoint Id="QWenPs9ivIjNii77F0X6X2" Bounds="580,334" />
+                <ControlPoint Id="PrTPort6E16LvI65RmZSwq" Bounds="580,394" />
+                <ControlPoint Id="NPS6dpwAI55LfVeTxtEJFd" Bounds="704,334" />
+                <ControlPoint Id="UocQqcz431hLKSXNimLdCH" Bounds="704,394" />
+                <ControlPoint Id="KBqIv3w1NDpMoTGg5i1cI1" Bounds="847,334" />
+                <ControlPoint Id="BuiEHyZjP6HMlQGD1wivOg" Bounds="847,394" />
+                <ControlPoint Id="J2BwF4xiCIVNv3sUgrre5s" Bounds="1036,334" />
+                <ControlPoint Id="SmqBlYneApVO3ZV4Y35Mv9" Bounds="1036,394" />
+                <ControlPoint Id="AVb0az4JWfaM8i3h9sQVWj" Bounds="1196,334" />
+                <ControlPoint Id="Lp0auXoRd6qQIh3KrLVeSn" Bounds="1196,394" />
+              </Canvas>
+              <Patch Id="JIk4rthQnpGN0zFJeNgnuw" Name="Create">
+                <Pin Id="VljoVGWI9CwPpDxTV71DHq" Name="Lnk File" Kind="InputPin" />
+                <Pin Id="Lqnl7KKMbKsOWUfhV9LA17" Name="Target File Path" Kind="InputPin" />
+                <Pin Id="Oh3HMO8C4cqOiAvx9LmglH" Name="Target Creation Date" Kind="InputPin" />
+                <Pin Id="OUsfYvHIIiaOJuUr30dp5y" Name="Target Last Access Date" Kind="InputPin" />
+                <Pin Id="Qj5AtImKWCgOxaFXGo2Vt4" Name="Target Modification Date" Kind="InputPin" />
+                <Pin Id="IMefzQu6j3eLZusHYpneQV" Name="Target File Size" Kind="InputPin" />
+              </Patch>
+              <ProcessDefinition Id="FIALcnzCD3kMrO109UEKKf" IsHidden="true">
+                <Fragment Id="Icpu4MQHqzFMsEnlTZvGMy" Patch="JIk4rthQnpGN0zFJeNgnuw" Enabled="true" />
+                <Fragment Id="HMVkmSpnzYbOTlEqK8udI9" Patch="TUkVlGrKbjEO5rUixsUGyD" />
+              </ProcessDefinition>
+              <Slot Id="MqbmrhkqQetOM0Dkruj9ND" Name="Lnk File">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="LnkFile" />
+                </p:TypeAnnotation>
+              </Slot>
+              <Slot Id="D9IRhGZa4TSQFx9l0de294" Name="Target File Path" Value="">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Path" />
+                </p:TypeAnnotation>
+              </Slot>
+              <Slot Id="PacAaM9dJd0QTsCgxwSqDG" Name="Target Creation Date">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="DateTime (UTC)" />
+                </p:TypeAnnotation>
+              </Slot>
+              <Slot Id="OUmXKLTeTZUQIqitfvj9yO" Name="Target Last Access Date">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="DateTime (UTC)" />
+                </p:TypeAnnotation>
+              </Slot>
+              <Slot Id="R68G73vBOJhLA4KCT7U5xj" Name="Target Modification Date">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="DateTime (UTC)" />
+                </p:TypeAnnotation>
+              </Slot>
+              <Slot Id="GK5PMEbAIF8LMpjQakdZ59" Name="Target File Size">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Slot>
+              <Link Id="NLV65ntpd9kOjuEqDsaD2H" Ids="VljoVGWI9CwPpDxTV71DHq,GNof9RdPJyTQJ9KMRZKLam" IsHidden="true" />
+              <Link Id="D36lTtIckrSMrmwFIaoVGU" Ids="GNof9RdPJyTQJ9KMRZKLam,RUSUWqJbvjhOC0RfH41JdD" />
+              <Patch Id="TUkVlGrKbjEO5rUixsUGyD" Name="Split">
+                <Pin Id="A6dpSyOh94oLJbUS13dsEM" Name="Lnk File" Kind="OutputPin" />
+                <Pin Id="LavWb8KdjwgNX5m9HzwITt" Name="Target File Path" Kind="OutputPin" />
+                <Pin Id="GKH9XztsUG1MiRbYX7a0dw" Name="Target Creation Date" Kind="OutputPin" />
+                <Pin Id="ERsirPDoAB8NKhuzx8LsZx" Name="Target Last Access Date" Kind="OutputPin" />
+                <Pin Id="BHlykTOKL9jMcD9kOXk5tj" Name="Target Modification Date" Kind="OutputPin" />
+                <Pin Id="SX8ThZQpm7INC159SsATcd" Name="Target File Size" Kind="OutputPin" />
+              </Patch>
+              <Link Id="Em0f5303WW3LjWJnH1G7SW" Ids="J7Y7D4Qk4BHOo52iuknfUL,A6dpSyOh94oLJbUS13dsEM" IsHidden="true" />
+              <Link Id="HK9K6Hg4AF5Ph0IETYSNS1" Ids="RUSUWqJbvjhOC0RfH41JdD,J7Y7D4Qk4BHOo52iuknfUL" />
+              <Link Id="OwtmgY3kPoPQSINmOyloew" Ids="Lqnl7KKMbKsOWUfhV9LA17,QWenPs9ivIjNii77F0X6X2" IsHidden="true" />
+              <Link Id="J5CzWLIycuiPJtJekRMrM4" Ids="QWenPs9ivIjNii77F0X6X2,AA3LAOTgVlJLIG9kT9Yg7X" />
+              <Link Id="OTMBM4VMx6LMiAPx8PMlp9" Ids="PrTPort6E16LvI65RmZSwq,LavWb8KdjwgNX5m9HzwITt" IsHidden="true" />
+              <Link Id="BRlH7qOburjN6oppPxE4MA" Ids="AA3LAOTgVlJLIG9kT9Yg7X,PrTPort6E16LvI65RmZSwq" />
+              <Link Id="RRBRrisiYyUPCtzdxrHQE4" Ids="Oh3HMO8C4cqOiAvx9LmglH,NPS6dpwAI55LfVeTxtEJFd" IsHidden="true" />
+              <Link Id="UMmQB2h34bCOni1Une5USK" Ids="NPS6dpwAI55LfVeTxtEJFd,RPhqu3hGamwMakwkk4HDEW" />
+              <Link Id="Maxg3NDBrFYLEtcjSpBziP" Ids="UocQqcz431hLKSXNimLdCH,GKH9XztsUG1MiRbYX7a0dw" IsHidden="true" />
+              <Link Id="NexGr2Taz2PPXsan6N3H7f" Ids="RPhqu3hGamwMakwkk4HDEW,UocQqcz431hLKSXNimLdCH" />
+              <Link Id="HrRy20xx9gKLPZSNAwWSwH" Ids="OUsfYvHIIiaOJuUr30dp5y,KBqIv3w1NDpMoTGg5i1cI1" IsHidden="true" />
+              <Link Id="Ngm4evIQRiqPy7xxRjjyS6" Ids="KBqIv3w1NDpMoTGg5i1cI1,MFEfTO1iYp2LX863xK3G1Z" />
+              <Link Id="MRZVMUEVeuQNmew7yJ9MRn" Ids="BuiEHyZjP6HMlQGD1wivOg,ERsirPDoAB8NKhuzx8LsZx" IsHidden="true" />
+              <Link Id="BuhmXgdHCguNdgPTQcIUhv" Ids="MFEfTO1iYp2LX863xK3G1Z,BuiEHyZjP6HMlQGD1wivOg" />
+              <Link Id="GQiNULqjI7uOCqRlUBTw3u" Ids="Qj5AtImKWCgOxaFXGo2Vt4,J2BwF4xiCIVNv3sUgrre5s" IsHidden="true" />
+              <Link Id="AYnyvl9HKejOKdUiEbRNFW" Ids="J2BwF4xiCIVNv3sUgrre5s,FJ000e98QkmQKDdNszT04F" />
+              <Link Id="Uh6fUXmNu95OLnXyUczwWG" Ids="SmqBlYneApVO3ZV4Y35Mv9,BHlykTOKL9jMcD9kOXk5tj" IsHidden="true" />
+              <Link Id="QBEh07dR65sM8I16qBcxBS" Ids="FJ000e98QkmQKDdNszT04F,SmqBlYneApVO3ZV4Y35Mv9" />
+              <Link Id="SG35lx5fsWJNPHVFExagcX" Ids="IMefzQu6j3eLZusHYpneQV,AVb0az4JWfaM8i3h9sQVWj" IsHidden="true" />
+              <Link Id="GnFMYnQYpysM9E9nE5nVI4" Ids="AVb0az4JWfaM8i3h9sQVWj,B03638dztdRQMazhldK8YI" />
+              <Link Id="AUzI7A1BHArMvIC7FizZeI" Ids="Lp0auXoRd6qQIh3KrLVeSn,SX8ThZQpm7INC159SsATcd" IsHidden="true" />
+              <Link Id="KXaiY30OjwwLsMETGXa0JG" Ids="B03638dztdRQMazhldK8YI,Lp0auXoRd6qQIh3KrLVeSn" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ LnkFile ************************
+
+-->
+          <Node Name="LnkFile" Bounds="541,459" Id="SA8RGqOIZjROi3eJhLkbyH">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="LnkFile" />
+            </p:TypeAnnotation>
+            <Patch Id="KzJErrhIgbHLUDuxvO5LOB">
+              <Canvas Id="FgsbjoaK4HkNhyLIs8m5MM" CanvasType="Group" />
+              <ProcessDefinition Id="BnFZ2vtNaeTMZMhM3P1f6X" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ Header ************************
+
+-->
+          <Node Name="Header" Bounds="577,511" Id="FMkPi3SSt1JOmT2qKeeuMo">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="Header" />
+            </p:TypeAnnotation>
+            <Patch Id="EaxwSA9beBZOdMbHWVPE3H">
+              <Canvas Id="MLqhdhBZU6GPr2CjqE8QCF" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="CS7P9pnMA8MM0lakf0jKLW" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ NetworkShareInfo ************************
+
+-->
+          <Node Name="NetworkShareInfo" Bounds="577,556" Id="DwLc7fZZYA5LSSXHvruS0W">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="NetworkShareInfo" />
+            </p:TypeAnnotation>
+            <Patch Id="GjdbGfCtUlnOL2VgDUbejb">
+              <Canvas Id="JnhSUVf2ntnPMZXbq4LC0j" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="E8H81HgOIA7L4klUPoCQKI" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ DataFlag ************************
+
+-->
+          <Node Name="DataFlag" Bounds="524,730" Id="CMlLpi1o6T5Mk9RXsvg3JT">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="DataFlag" />
+            </p:TypeAnnotation>
+            <Patch Id="N878Rcsqj33NY6ma7M4kRn">
+              <Canvas Id="E78wGPVoFCBP3GfRYa3ljs" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="GsMe7UFW0fWQO7oB0EV7yE" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ DriveTypes ************************
+
+-->
+          <Node Name="DriveTypes" Bounds="810,730" Id="B2TnNJdA3hFPkOdjP2OYjy">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.VolumeInfo" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="DriveTypes" />
+            </p:TypeAnnotation>
+            <Patch Id="IcgQRVJ3Ve0PMh2aOeA9PY">
+              <Canvas Id="VZuJaSjhlDVPoq7LAfCLMq" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="RZYTbJizcdtN5OsKdtHrSn" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ FileAttribute ************************
+
+-->
+          <Node Name="FileAttribute" Bounds="524,780" Id="NLqeQcAYrw3M8aCjuhfO72">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="FileAttribute" />
+            </p:TypeAnnotation>
+            <Patch Id="Dq4mq4RmYW3LX3G3aQ8Nf2">
+              <Canvas Id="OGHzfgggzNVMq0zTiwz6ti" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="KYWa92ZWNTYL3R6XUU0tAa" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ LocationFlag ************************
+
+-->
+          <Node Name="LocationFlag" Bounds="810,780" Id="CGMXn4fNyXrPzR9HCCrX3e">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.LnkFile" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="LocationFlag" />
+            </p:TypeAnnotation>
+            <Patch Id="D0SxbzY1r1NOQeIxdVtE65">
+              <Canvas Id="Vfs2EoZXho5OBANimPlz7E" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="AR7ofiTftYOLO9mDKPA4J1" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ProviderType ************************
+
+-->
+          <Node Name="ProviderType" Bounds="524,830" Id="KES9FrcQZiOMq6woYvBE6Q">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.NetworkShareInfo" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ProviderType" />
+            </p:TypeAnnotation>
+            <Patch Id="M11BlMj5IB6P3MocpI0dwR">
+              <Canvas Id="HIW832VQ5vqPQXXSQ1Q7Sl" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="NJg1HIo6WMRMqk3nydAjOD" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ShareFlag ************************
+
+-->
+          <Node Name="ShareFlag" Bounds="810,830" Id="HbgqClkYvl8NjC7qBrEvqE">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.NetworkShareInfo" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ShareFlag" />
+            </p:TypeAnnotation>
+            <Patch Id="NbLuFSZgKSzNJLFZqv4Np4">
+              <Canvas Id="GDvV0DHKFQYLPISf34HWX7" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="NUsgbnmrzSyLjqI1IfbnTI" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ShowWindowOption ************************
+
+-->
+          <Node Name="ShowWindowOption" Bounds="524,880" Id="JqoPR4XlANUOgdwWerPv4q">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ShowWindowOption" />
+            </p:TypeAnnotation>
+            <Patch Id="DWElhYUDVIZMk4321aqbXV">
+              <Canvas Id="GTInhGPmf1xMOuc2tix7Ml" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="OL3GkTfnApCNNRaE9q7B6L" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VolumeInfo ************************
+
+-->
+          <Node Name="VolumeInfo" Bounds="578,605" Id="Ai4h4HUYDMvPB19T9uzjuC">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="VolumeInfo" />
+            </p:TypeAnnotation>
+            <Patch Id="In9HmtNk5JoNu0rD8hG0VB">
+              <Canvas Id="TqOSdolroKIQInBazKLHP1" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="LaMqO8ntLlWLhb0w3PqiA7" IsHidden="true" />
+            </Patch>
+          </Node>
+          <Overlay Id="AZQRiZxb5unLM97Ww2vXx1" Name="Enums" Bounds="491,648,483,403" />
+          <Overlay Id="EbFLXkT9gHLNsIrI6xhiYl" Name="Lowlevel stuff" Bounds="492,391,280,235" />
+          <!--
+
+    ************************ ConsoleDataBlock ************************
+
+-->
+          <Node Name="ConsoleDataBlock" Bounds="838,458" Id="QDIC0Xrx5MtNwI3sklaZPS">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ConsoleDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="HujFeKaajdnPciLZc2yFKm">
+              <Canvas Id="De3LKhQ9sjhPTI1fSaytYS" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="A0mI3lvAdoNMnOa092JMYX" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ConsoleFeDataBlock ************************
+
+-->
+          <Node Name="ConsoleFeDataBlock" Bounds="839,492" Id="StctsRWDSN2O8lJpnpYyMP">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ConsoleFeDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="E23mag38A6tLa9tWb1DJgb">
+              <Canvas Id="GrKqh6EV01HNhrCkshL4jN" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="HdeXMg51aSgPVNTADU9O34" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ DamagedDataBlock ************************
+
+-->
+          <Node Name="DamagedDataBlock" Bounds="852,538" Id="NQW9CBHCFtHPlQO2LknlVH">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="DamagedDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="U5DfKKzbzJ3OIUQ8Bmc0fG">
+              <Canvas Id="Cq2ujY0pfMnOeTfrb3ItWi" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="F28xW7My10SNLKOj6FbbFQ" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ DarwinDataBlock ************************
+
+-->
+          <Node Name="DarwinDataBlock" Bounds="852,588" Id="HxWQSt29KoTO17fJAgQnaF">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="DarwinDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="KtwOFtphmnRPbWygu5QaFy">
+              <Canvas Id="LreSr2pwNtgPmVHTJNEXDX" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="JCCxYO4t7vmMYq3u1me62H" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ EnvironmentVariableDataBlock ************************
+
+-->
+          <Node Name="EnvironmentVariableDataBlock" Bounds="1054,494" Id="IlGXZWj6vRNLoh4C7ZFlqK">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="EnvironmentVariableDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="RrkwC2g9LBKQasNHagmFUK">
+              <Canvas Id="DTVgnrJo10tLqtq6dxkr0E" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="GSLpPwn8YlaLrDZEdLuume" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ IconEnvironmentDataBlock ************************
+
+-->
+          <Node Name="IconEnvironmentDataBlock" Bounds="1069,542" Id="HjVzzsyToeXPMI9AWihbhO">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="IconEnvironmentDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="VCu38g0X2ehLkWr9J94Kjh">
+              <Canvas Id="UmdvlpG8GdOQR6EEVNR31o" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="NnOrUV6D8k4OPRQGGBOnMp" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ KnownFolderDataBlock ************************
+
+-->
+          <Node Name="KnownFolderDataBlock" Bounds="1349,542" Id="OhXLnMRuHLiOv0UGOV2BJr">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="KnownFolderDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="TyzL4ZwlxJZORG0iSQNoiP">
+              <Canvas Id="CH5V2YgeSxZN759236obQx" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="Mm0joE9LX7pNE5JgdIUx1C" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ PropertyStoreDataBlock ************************
+
+-->
+          <Node Name="PropertyStoreDataBlock" Bounds="1069,592" Id="TWfSCQauFzsQNBW4mj1hHA">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="PropertyStoreDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="IAv54aCz6nmOYnCmTrUH5o">
+              <Canvas Id="HzI8y8l6oAjM3ohMtJj9ub" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="MEC4Sq9ksTKQHi0qfF0QF1" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ShimDataBlock ************************
+
+-->
+          <Node Name="ShimDataBlock" Bounds="1349,592" Id="RnSZc4m3lOlPMSfs0RzAeD">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ShimDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="T92tKxtKwRQOv6WZ1JIxNK">
+              <Canvas Id="QWneLqF39ZnN8nbEIGlcn8" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="GBYSSz2J9RBQEMWNeGy6Lz" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ SpecialFolderDataBlock ************************
+
+-->
+          <Node Name="SpecialFolderDataBlock" Bounds="1069,642" Id="FRzOu5U3fUHPeGfoKzwc3B">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="SpecialFolderDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="MtLK1zJo4FDLl7y8Lmv1XX">
+              <Canvas Id="P6QuVvrIRybNGgzpymj0yw" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="DAKdQWO0mf1MUIcFyFvrZM" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ TrackerDataBaseBlock ************************
+
+-->
+          <Node Name="TrackerDataBaseBlock" Bounds="1349,642" Id="Tb1yqDy5muMLmjK7OcxD4D">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="TrackerDataBaseBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="DQzKWNrPjsCPbl042q1mOG">
+              <Canvas Id="KEycksfpFESNh4UZnLJrhN" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="P8PnHN8sPIiPVhPt5VWeOA" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VistaAndAboveIdListDataBlock ************************
+
+-->
+          <Node Name="VistaAndAboveIdListDataBlock" Bounds="1069,692" Id="LLuzc54ELzDL3beZaaDwJY">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="VistaAndAboveIdListDataBlock" />
+            </p:TypeAnnotation>
+            <Patch Id="Gs31axqEju8O20S6nBAAyK">
+              <Canvas Id="AyKm2Buz8sGMID9XBULKDB" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="RqVjAIspMElQFcFofuOVOt" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ CursorWeight ************************
+
+-->
+          <Node Name="CursorWeight" Bounds="809,891" Id="GAZC14vmrjkL2driyGNEbf">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="CursorWeight" />
+            </p:TypeAnnotation>
+            <Patch Id="MJgN05inSboOkXgOejdVCP">
+              <Canvas Id="HOQdk6NIyXjNDuiAfHh9FI" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="HrHtP2lpWeiNqtxJbhZTwV" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ FillAttribute ************************
+
+-->
+          <Node Name="FillAttribute" Bounds="809,941" Id="V8P8vxsJhjtLBAKbiFO0Vq">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="FillAttribute" />
+            </p:TypeAnnotation>
+            <Patch Id="Bc2wCAhHYz6PIIjeKD55Wr">
+              <Canvas Id="Ff4qqCtzCcHPVt08lsBMAx" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="GN3vFPE7fnUOS4R8AJvp6H" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ FontFamily ************************
+
+-->
+          <Node Name="FontFamily" Bounds="809,991" Id="JcUNemj6GGjP2ZWrcQnfPB">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="FontFamily" />
+            </p:TypeAnnotation>
+            <Patch Id="I7C7VgoxkY1LBqDdTkw2zH">
+              <Canvas Id="DvzdFky07bWONYWT4p7ARz" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="FuKRUctmpUxOu0DTIclhjp" IsHidden="true" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ ExtraDataBase ************************
+
+-->
+          <Node Name="ExtraDataBase" Bounds="1393,472" Id="Hn17JeqOtaaMRLnqC3jSU6">
+            <p:NodeReference>
+              <Choice Kind="ForwardDefinition" Name="Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+              <Choice Kind="TypeFlag" Name="ExtraDataBase" />
+            </p:TypeAnnotation>
+            <Patch Id="BFmvR159wseMaMsl9NeODJ">
+              <Canvas Id="KmSwmxDZXlvLSBgetsI8Qz" BordersChecked="false" CanvasType="Group" />
+              <ProcessDefinition Id="T5acGt7BNrjOaHfrH7DZuT" IsHidden="true" />
+            </Patch>
+          </Node>
+        </Canvas>
       </Canvas>
     </Canvas>
     <!--
@@ -216,7 +1095,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="QJDVUJTL4AzNI9wEYkBhQ7" Location="VL.CoreLib" Version="2021.4.0-0303-g4b58026559" />
+  <NugetDependency Id="QJDVUJTL4AzNI9wEYkBhQ7" Location="VL.CoreLib" Version="2021.3.3" />
   <NugetDependency Id="JPCA8zOFzuDQZbMhOUclMf" Location="Trinet.Core.IO.Ntfs" Version="4.1.1" />
   <PlatformDependency Id="BgM3If2THXqOLRhpGkV0DU" Location="System.IO" />
+  <NugetDependency Id="SAYJjc5sNdfLUAfyLCIVrz" Location="Lnk" Version="1.2.0.3" />
 </Document>
