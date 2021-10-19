@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="GAGWauIJq8ZLxJOH6onLsK" LanguageVersion="2021.4.0.526" Version="0.128">
+  <NugetDependency Id="UmiMR7foROPL9h3HOgXLdl" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
+  <Patch Id="KKyVVZeYYEqP4v3lV3QWYr">
+    <Canvas Id="DEGHIz9ClYKLSiMh1kMfe7" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Mgvut9Q4TM6LmE3HEx914M">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="NZsH2z7DWC7QHaop7dznFQ">
+        <Canvas Id="PEc6y7qmot4NOPnaZ8EgZX" CanvasType="Group">
+          <Node Bounds="120,454,85,19" Id="R2LodzlenvEL0L9MzNq5XP">
+            <p:NodeReference LastCategoryFullName="Blue.FileSystem.Prefetch" LastSymbolSource="VL.Blue.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="PrefetchReader" />
+            </p:NodeReference>
+            <Pin Id="CbfIzsLEkgoM7YOz4PA53c" Name="Filename" Kind="InputPin" />
+            <Pin Id="HsxXpFs5RYaL0ZYrUcLnFO" Name="Read" Kind="InputPin" />
+            <Pin Id="DbHXd4Q8soKNrrmI53zjgw" Name="Last Run Times" Kind="OutputPin" />
+            <Pin Id="T80TCxl3VWuLb92O4wa1gE" Name="Run Count" Kind="OutputPin" />
+            <Pin Id="NPIW1QYBrDlN0BUopLxxvk" Name="Filenames" Kind="OutputPin" />
+            <Pin Id="UFB5STndyqoM4OYntgI1QT" Name="Executable Filename" Kind="OutputPin" />
+            <Pin Id="OWMDfZdPkZwPrcZsmZxFgX" Name="Volume Information" Kind="OutputPin" />
+          </Node>
+          <Pad Id="KYQY4M2DlYfQSYzum3davQ" Comment="Filename" Bounds="122,415,80,15" ShowValueBox="true" isIOBox="true" Value="C:\Users\seb\Desktop\SUBL.EXE-1424F858.pf">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Q63ychF9wNhOhWWddO8Bwb" Bounds="75,106,238,31" ShowValueBox="true" isIOBox="true" Value="What are Prefetch files">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">15</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="P7d9jvG4ujZQNF53qZ89BD" Bounds="75,153,661,81" ShowValueBox="true" isIOBox="true" Value="Let's quote ForensicsWiki here : Windows Prefetch files, introduced in Windows XP, are designed to speed up the application startup process. Prefetch files contain the name of the executable, a Unicode list of DLLs used by that executable, a count of how many times the executable has been run, and a timestamp indicating the last time the program was run.">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="BfMrkhmBJF3LAQfti9rEtB" Bounds="75,268,646,62" ShowValueBox="true" isIOBox="true" Value="Try for yourself : if you go to C:\Windows\Prefetch, you'll see files ending in .pf : those are the Prefetch files! Copy one of those somewhere and try to read it with PrefetchReader and see the amount of information you can get out of it!">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="JC7LtNnbIzbO6D1Bb3Itg9" Bounds="75,547,151,19" ShowValueBox="true" isIOBox="true" Value="Online resources :">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="FG8LYQH8uvcQdpCjjycL0F" Bounds="75,576,342,19" ShowValueBox="true" isIOBox="true" Value="https://forensicswiki.xyz/wiki/index.php?title=Prefetch">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="GX652yWZH5DMoOsHA1CzHz" Bounds="75,604,365,19" ShowValueBox="true" isIOBox="true" Value="https://www.magnetforensics.com/blog/forensic-analysis-of-prefetch-files-in-windows/">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="FJtVRimpCbfOGwnkKDjxM7" Bounds="75,634,271,19" ShowValueBox="true" isIOBox="true" Value="https://www.youtube.com/watch?v=f4RAtR_3zcs">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Lk0BMGP1uCMLWTZYRRzN7y" Bounds="350,634,139,19" ShowValueBox="true" isIOBox="true" Value="- a video by 13Cubed">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IWlT5XOun3NPAell7XFZoR" Bounds="75,701,380,19" ShowValueBox="true" isIOBox="true" Value="The prefetch nodes are using Erik Zimmerman's Prefetch C# lib">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HRCyiSQOvLKLGFZPFo3pLH" Bounds="75,729,274,19" ShowValueBox="true" isIOBox="true" Value="https://github.com/EricZimmerman/Prefetch">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="MWR5RCNBendLNokobwCrlb" Name="Create" />
+        <Patch Id="K6u3Zh4TzUdL9OnogIzz7S" Name="Update" />
+        <ProcessDefinition Id="DxSvoV2MnocLVwFEEimrDY">
+          <Fragment Id="A9XJENrY6KkNo2yYOXujEj" Patch="MWR5RCNBendLNokobwCrlb" Enabled="true" />
+          <Fragment Id="CN1gAMfnOYMMPiqET9EO0p" Patch="K6u3Zh4TzUdL9OnogIzz7S" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="S7k7SD9gsdmQIradNwmvuv" Ids="KYQY4M2DlYfQSYzum3davQ,CbfIzsLEkgoM7YOz4PA53c" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="LOb0hNRKWfPN08DAzWTyGW" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
+  <NugetDependency Id="VvLON6JLa8ZMTrAWJuM2pm" Location="VL.Blue" Version="0.0.0.0" />
+</Document>

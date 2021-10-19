@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="ItbzroA06XpOzgSkGOBS0c" LanguageVersion="2021.3.3.131" Version="0.128">
-  <NugetDependency Id="TNQQodoeTIVOFqPalAxzLl" Location="VL.CoreLib" Version="2021.3.3" />
+<Document xmlns:p="property" Id="ItbzroA06XpOzgSkGOBS0c" LanguageVersion="2021.4.0.526" Version="0.128">
+  <NugetDependency Id="TNQQodoeTIVOFqPalAxzLl" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
   <Patch Id="GNkwL2ssMHEPRZfg8ey1K7">
     <Canvas Id="VclDbfBVE3jOiM6pVs3UX7" DefaultCategory="Blue" CanvasType="FullCategory">
       <Canvas Id="ONokeHYSTevPWAYG52Cemb" Name="FileSystem" Position="232,223">
@@ -9,7 +9,7 @@
     ************************ AlternateDataStreamReader ************************
 
 -->
-        <Node Name="AlternateDataStreamReader" Bounds="555,364" Id="CN3eHm7IgJvPXhzCrBBmOb" Summary="Retrieves alternate data streams from files" Tags="ntfs,data,stream,alternate">
+        <Node Name="AlternateDataStreamReader" Bounds="546,364" Id="CN3eHm7IgJvPXhzCrBBmOb" Summary="Retrieves alternate data streams from files" Tags="ntfs,data,stream,alternate">
           <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -193,7 +193,7 @@
             <Link Id="H7rqMDnt7f2MUL8BS5DuXf" Ids="OIaZ13q6a2WM1oTKR0a0Il,UjCZAF6UtoKLSUgeXjKFXe" />
           </Patch>
         </Node>
-        <Canvas Id="SH0hJaLkKpdNVqwNlQqQSo" Name="Shortcut" Position="556,427">
+        <Canvas Id="SH0hJaLkKpdNVqwNlQqQSo" Name="Shortcut" Position="546,427">
           <!--
 
     ************************ ShortcutReader ************************
@@ -520,32 +520,32 @@
                 <Fragment Id="HMVkmSpnzYbOTlEqK8udI9" Patch="TUkVlGrKbjEO5rUixsUGyD" />
               </ProcessDefinition>
               <Slot Id="MqbmrhkqQetOM0Dkruj9ND" Name="Lnk File">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="LnkFile" />
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="D9IRhGZa4TSQFx9l0de294" Name="Target File Path" Value="">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="Path" />
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="PacAaM9dJd0QTsCgxwSqDG" Name="Target Creation Date">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="DateTime (UTC)" />
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="OUmXKLTeTZUQIqitfvj9yO" Name="Target Last Access Date">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="DateTime (UTC)" />
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="R68G73vBOJhLA4KCT7U5xj" Name="Target Modification Date">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="DateTime (UTC)" />
                 </p:TypeAnnotation>
               </Slot>
               <Slot Id="GK5PMEbAIF8LMpjQakdZ59" Name="Target File Size">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation p:Type="TypeReference">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
               </Slot>
@@ -1072,6 +1072,352 @@
             </Patch>
           </Node>
         </Canvas>
+        <Canvas Id="L9QcqvgKDYVOYJjqDTJfa2" Name="Prefetch" Position="546,480">
+          <!--
+
+    ************************ PrefetchReader ************************
+
+-->
+          <Node Name="PrefetchReader" Bounds="359,381" Id="IDxVfqONcvEMS1TL1dlQli" Summary="Parses Prefetch files" Remarks="Uses Erik Zimmerman's Prefetch lib" Tags="forensics,blue">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="ContainerDefinition" Name="Process" />
+            </p:NodeReference>
+            <Patch Id="G6R8ZhMeM2WPk4U0LAzbZ8">
+              <Canvas Id="RBzoXStNLyeLxAdYbiypTn" CanvasType="Group">
+                <Node Bounds="181,223,747,460" Id="GTMLTekDeRCPRG2huDpQcW">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                    <FullNameCategoryReference ID="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="EEajazHy9DgMfYwmJGKZ2Z" Name="Force" Kind="InputPin" />
+                  <Pin Id="E9QSIcE5XctPDed5L5rcHm" Name="Dispose Cached Outputs" Kind="InputPin" />
+                  <Pin Id="PAYB513kKK8NZ2D62gFa2D" Name="Has Changed" Kind="OutputPin" />
+                  <Patch Id="B3Ve6BY7jsLNEU2Nej9WRE" ManuallySortedPins="true">
+                    <Patch Id="UyKSYU5NNKFLvgRv3SgN1L" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="VzrvxkarEG3LxwPDJKk3id" Name="Then" ManuallySortedPins="true" />
+                    <Node Bounds="216,246,55,19" Id="AIy8l4sJaRJMyLjVIwg7iV">
+                      <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="ToString" />
+                      </p:NodeReference>
+                      <Pin Id="MCC5kYO329BMs8FnQ6UZs3" Name="Input" Kind="InputPin" />
+                      <Pin Id="DRQWOqBPcIJQdpsEhZo21Y" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="204,346,712,218" Id="CCk9NoJzxX2LPSMkYfmfxG">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                        <CategoryReference Kind="Category" Name="Primitive" />
+                      </p:NodeReference>
+                      <Pin Id="ALu72s2KoMxOALsSrVxeZq" Name="Condition" Kind="InputPin" />
+                      <Patch Id="RE18umLQSMmN9pQjxGp92M" ManuallySortedPins="true">
+                        <Patch Id="B6xS1MgRgnjOmUOT8lTYSC" Name="Create" ManuallySortedPins="true" />
+                        <Patch Id="VLpMlMoQXVcMbtqNeriaFs" Name="Then" ManuallySortedPins="true" />
+                        <Node Bounds="216,427,80,26" Id="AsmVJjtD2FfODZfsoNG8Vz">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="Prefetch" />
+                            <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
+                            <Choice Kind="OperationCallFlag" Name="LastRunTimes" />
+                          </p:NodeReference>
+                          <Pin Id="N2I1GBeBGSfOqb89NGnVCM" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="TFsW84VA2MyPNyGoQRFIOE" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="BxxoOREl7o5LiaMeIt8xUh" Name="Last Run Times" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="334,429,61,26" Id="LTXpTODUH6KLXpuEfZBA3S">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="Prefetch" />
+                            <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
+                            <Choice Kind="OperationCallFlag" Name="RunCount" />
+                          </p:NodeReference>
+                          <Pin Id="Die5O0AXLV4QaqM70wh7Wu" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="Ckupu0dmBAmP8Jv9Ox81gk" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="JpqCwaxWgO8Oe5UlMY3rDI" Name="Run Count" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="432,431,62,26" Id="NuRyGPTHolXN55EnlffUfx">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
+                            <Choice Kind="OperationCallFlag" Name="Filenames" />
+                          </p:NodeReference>
+                          <Pin Id="HYMse2HPIWYMKwxaTWaavq" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="MGW1AW43aNrQbya0KgHh6Y" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="QIg9nOzvs7ZOMSeqTf89n5" Name="Filenames" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="515,432,49,26" Id="JuubqXveiGkNT0KUSyAC2o">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="Header" />
+                            <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" NeedsToBeDirectParent="true" />
+                          </p:NodeReference>
+                          <Pin Id="RvaYOe6lqzMOpLlLY3iGFa" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="MJ2sDc3JjePMWnjyEmLPl3" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="DMr2PXyxPCSOyl8Zy5U6Iq" Name="Header" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="559,472,106,26" Id="C8O04zpAH5sPQbbVvt9SIE">
+                          <p:NodeReference LastCategoryFullName="Prefetch.Header" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="ExecutableFilename" />
+                          </p:NodeReference>
+                          <Pin Id="BP1ZM00FaX9LFMGzpERmee" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="R72PwFS48tyQM6EleY30pq" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="L2mVNTe7AoxPabpUsb4Jyr" Name="Executable Filename" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="216,369,41,19" Id="JGaygN6Ly1COp1gJdPMUlC">
+                          <p:NodeReference LastCategoryFullName="Prefetch.PrefetchFile" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="PrefetchFile" />
+                            <Choice Kind="OperationCallFlag" Name="Open" />
+                          </p:NodeReference>
+                          <Pin Id="GEHZjFFzyIxQZbIQvIkLtD" Name="File" Kind="InputPin" />
+                          <Pin Id="Da3BdDvZSKELwgzZjctAWW" Name="Result" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="741,438,104,26" Id="PBKDaLBWZ9XOLCGdDjo4sd">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="AssemblyCategory" Name="Prefetch" />
+                            <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
+                            <Choice Kind="OperationCallFlag" Name="VolumeInformation" />
+                          </p:NodeReference>
+                          <Pin Id="Jn3Hyw6WicANACTeDPrrGM" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="J5P5s4W5VYJL4fjJYh6hOO" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="Sxss3PnYAj2PGpr7IJRofx" Name="Volume Information" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="840,497,57,26" Id="BCoeZf91JCYQMoyaHZzdQZ">
+                          <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastSymbolSource="VL.Collections.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="ClassType" Name="MutableList" />
+                            <Choice Kind="OperationCallFlag" Name="GetItem" />
+                          </p:NodeReference>
+                          <Pin Id="IlRYcW4pF0eM4PShbqhcxE" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="CafzZY8CIwcNx9KtjeSotv" Name="Index" Kind="InputPin" />
+                          <Pin Id="Vo3vPx0wZERP1gH8Eq8vVM" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="SqxLvbEaZOyLsL8Yg2ETV8" Name="Item" Kind="OutputPin" />
+                        </Node>
+                      </Patch>
+                      <ControlPoint Id="F2t6D0odalZPgwgQaLfB4F" Bounds="293,558" Alignment="Bottom" />
+                      <ControlPoint Id="BliB7Q7362SMlfFTyxM8RM" Bounds="294,352" Alignment="Top" />
+                      <ControlPoint Id="IaQlChqRMItO9HWvCEoyAE" Bounds="392,558" Alignment="Bottom" />
+                      <ControlPoint Id="BcBy0NXAWpuLAHCozFmbWr" Bounds="392,352" Alignment="Top" />
+                      <ControlPoint Id="Il0xv74mq3cNgBLSVplucL" Bounds="491,558" Alignment="Bottom" />
+                      <ControlPoint Id="F20OlUGSohUOTDMEZXskSY" Bounds="489,352" Alignment="Top" />
+                      <ControlPoint Id="Op1qXcJ0ffbPSb3a0uR3ko" Bounds="662,558" Alignment="Bottom" />
+                      <ControlPoint Id="GqUthcMrOSOMxRsotEyxdP" Bounds="662,352" Alignment="Top" />
+                      <ControlPoint Id="VGNwfGH2fhVPBmSyfYC3cd" Bounds="894,558" Alignment="Bottom" />
+                      <ControlPoint Id="P7cSadOAcIsNRBHAInoXjd" Bounds="841,352" Alignment="Top" />
+                    </Node>
+                    <Node Bounds="204,278,81,19" Id="Ey551ZSlqlUOewrrTFb7cV">
+                      <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
+                      </p:NodeReference>
+                      <Pin Id="HceiJjeP22POvCpMVGH53P" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="HWF3CTTwhrOOkij7sQTkYG" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="204,310,37,19" Id="Mk86lycyQLnMLxJL4ALDBV">
+                      <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="NOT" />
+                      </p:NodeReference>
+                      <Pin Id="CuyGDaCsQgGQUXOHzlmpVi" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="OSy7FWcFsQaNK4NJZfNngp" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                  </Patch>
+                  <ControlPoint Id="Utmn8Hi9C3TLWAOCKd2xAi" Bounds="218,275" Alignment="Top" />
+                  <ControlPoint Id="FayDQBvGLxiPV5ClXFVeeu" Bounds="293,678" Alignment="Bottom" />
+                  <ControlPoint Id="H6IyS3TulBSNLieiPxgf0u" Bounds="392,678" Alignment="Bottom" />
+                  <ControlPoint Id="PBjmS7IwOUSMQalRPpkOWm" Bounds="491,678" Alignment="Bottom" />
+                  <ControlPoint Id="Ffp6jFglo0VOIGggJ1N7oC" Bounds="662,678" Alignment="Bottom" />
+                  <ControlPoint Id="BZhB8i55JZJN3C4A2wyO1i" Bounds="895,678" Alignment="Bottom" />
+                </Node>
+                <ControlPoint Id="TJjKNPfSv9DMlNdNfxA15R" Bounds="293,717" />
+                <ControlPoint Id="AG53ldQ8y6xOtrp48QkXYj" Bounds="392,717" />
+                <ControlPoint Id="Q9PaRiDJ8zXNF6olM1J0lF" Bounds="491,717" />
+                <ControlPoint Id="ByEybXlrdQhO9UFTtZRc6j" Bounds="662,717" />
+                <ControlPoint Id="DFV5tFlHKgvPDH5qzlespg" Bounds="218,194" />
+                <ControlPoint Id="TixT0O52RBmL7KIIzdtN3m" Bounds="161,197" />
+                <ControlPoint Id="CiKQSF7WE7MMuc26MLZ6jB" Bounds="895,712" />
+              </Canvas>
+              <ProcessDefinition Id="As8Dajikb2jOIUwkPJbtLk">
+                <Fragment Id="Gf5idnJa1qoPbpT1uHiAD6" Patch="JGohUK2Fx54LTyuo36UTmA" Enabled="true" />
+                <Fragment Id="Otvn5s2SFp9OqvUQ0VpSL9" Patch="RdDcAPeEDquQZaVK1kFScf" Enabled="true" />
+              </ProcessDefinition>
+              <Link Id="TfXz78CyObvOzgtTvVbh85" Ids="Utmn8Hi9C3TLWAOCKd2xAi,MCC5kYO329BMs8FnQ6UZs3" />
+              <Link Id="Tvg6bMBEymdO2JKeKgvhN3" Ids="DRQWOqBPcIJQdpsEhZo21Y,GEHZjFFzyIxQZbIQvIkLtD" />
+              <Link Id="VoeiRRDGS1QMnxjTMAvAO4" Ids="Da3BdDvZSKELwgzZjctAWW,N2I1GBeBGSfOqb89NGnVCM" />
+              <Link Id="KPFlSNLNZuYPFvv0Qohu0N" Ids="Da3BdDvZSKELwgzZjctAWW,Die5O0AXLV4QaqM70wh7Wu" />
+              <Link Id="RWmQRDbkLGzQTBnDS7bg9B" Ids="Da3BdDvZSKELwgzZjctAWW,HYMse2HPIWYMKwxaTWaavq" />
+              <Link Id="CHAgJRZlN34OyKL0tihPGo" Ids="Da3BdDvZSKELwgzZjctAWW,RvaYOe6lqzMOpLlLY3iGFa" />
+              <Link Id="FUN5Ls2iyrCNQP7WngKFhd" Ids="FayDQBvGLxiPV5ClXFVeeu,TJjKNPfSv9DMlNdNfxA15R" />
+              <Link Id="DTbimRRGsqtQYk0VnTqmzH" Ids="TJjKNPfSv9DMlNdNfxA15R,I3uTz40vyKLMZBHutJbNH9" IsHidden="true" />
+              <Link Id="InTS2DWzDWFPeVpeOz1gj8" Ids="H6IyS3TulBSNLieiPxgf0u,AG53ldQ8y6xOtrp48QkXYj" />
+              <Link Id="OKX6t1ZNxXvOY4D0c8IStF" Ids="AG53ldQ8y6xOtrp48QkXYj,SwMWGZ2dEaPMxMxTePb9yM" IsHidden="true" />
+              <Link Id="Q8gmtb3HuKJPMw37UOBeoq" Ids="PBjmS7IwOUSMQalRPpkOWm,Q9PaRiDJ8zXNF6olM1J0lF" />
+              <Link Id="B18YrklSSEOQZorFFeKVlk" Ids="Q9PaRiDJ8zXNF6olM1J0lF,AohH9OAK5wbPtDJegRtVhD" IsHidden="true" />
+              <Link Id="HginLW2T86GLHdaTWj5Jvx" Ids="Ffp6jFglo0VOIGggJ1N7oC,ByEybXlrdQhO9UFTtZRc6j" />
+              <Link Id="HFRzi9K336XNJoBRO0vOXb" Ids="ByEybXlrdQhO9UFTtZRc6j,T2YPkgnzvyaLK7ZcM1bXpr" IsHidden="true" />
+              <Link Id="R4n60AzB8A2M2u7YkfpT5e" Ids="DFV5tFlHKgvPDH5qzlespg,Utmn8Hi9C3TLWAOCKd2xAi" />
+              <Link Id="HWKTzXTMg8LQPwWBGh6Hzd" Ids="OG6yNDLYo9XP7f4mpzVnjH,DFV5tFlHKgvPDH5qzlespg" IsHidden="true" />
+              <Link Id="LP0kvarMJiYQTcYAdgDDkl" Ids="DMr2PXyxPCSOyl8Zy5U6Iq,BP1ZM00FaX9LFMGzpERmee" />
+              <Link Id="ECag1sSqPjILnRQCSVWkzF" Ids="BliB7Q7362SMlfFTyxM8RM,F2t6D0odalZPgwgQaLfB4F" IsFeedback="true" />
+              <Link Id="KDQeOwkoQ75NOzvsNJ2YYs" Ids="BxxoOREl7o5LiaMeIt8xUh,F2t6D0odalZPgwgQaLfB4F" />
+              <Link Id="QHbrkQ8ZVjHMlaUDSe2A9A" Ids="F2t6D0odalZPgwgQaLfB4F,FayDQBvGLxiPV5ClXFVeeu" />
+              <Link Id="MUASldmcEhcMPm29mTFVgZ" Ids="BcBy0NXAWpuLAHCozFmbWr,IaQlChqRMItO9HWvCEoyAE" IsFeedback="true" />
+              <Link Id="QSnv8Z3gvDCN1o23sYdylk" Ids="JpqCwaxWgO8Oe5UlMY3rDI,IaQlChqRMItO9HWvCEoyAE" />
+              <Link Id="L7a6nJ2Tv6UMy6TkMWPf6N" Ids="IaQlChqRMItO9HWvCEoyAE,H6IyS3TulBSNLieiPxgf0u" />
+              <Link Id="SWgW3VvqLaLQMqDWK4nAu7" Ids="F20OlUGSohUOTDMEZXskSY,Il0xv74mq3cNgBLSVplucL" IsFeedback="true" />
+              <Link Id="Sf6ccfY8lIJMrz0eIUhx3S" Ids="QIg9nOzvs7ZOMSeqTf89n5,Il0xv74mq3cNgBLSVplucL" />
+              <Link Id="Rm3nwItZ9gRNZvIewk487P" Ids="Il0xv74mq3cNgBLSVplucL,PBjmS7IwOUSMQalRPpkOWm" />
+              <Link Id="D1woOsBtXiEORacgHzs7Sf" Ids="GqUthcMrOSOMxRsotEyxdP,Op1qXcJ0ffbPSb3a0uR3ko" IsFeedback="true" />
+              <Link Id="VAepDnXA2KuMoDG6mpcMyR" Ids="L2mVNTe7AoxPabpUsb4Jyr,Op1qXcJ0ffbPSb3a0uR3ko" />
+              <Link Id="EO0fERtLxblLwUk44B0l7g" Ids="Op1qXcJ0ffbPSb3a0uR3ko,Ffp6jFglo0VOIGggJ1N7oC" />
+              <Link Id="I40TiQlR0j2QBFADbsD3uX" Ids="DRQWOqBPcIJQdpsEhZo21Y,HceiJjeP22POvCpMVGH53P" />
+              <Link Id="CNeXSk9U089OG4Snx86fDy" Ids="HWF3CTTwhrOOkij7sQTkYG,CuyGDaCsQgGQUXOHzlmpVi" />
+              <Link Id="SLgHsMR1w2NQUkcbhwsHZ8" Ids="OSy7FWcFsQaNK4NJZfNngp,ALu72s2KoMxOALsSrVxeZq" />
+              <Link Id="Bz2HL3uBEYwQDFo92EhN43" Ids="TixT0O52RBmL7KIIzdtN3m,EEajazHy9DgMfYwmJGKZ2Z" />
+              <Link Id="AdhXP0OhCnxOwaHY8azoQm" Ids="I2stvgnAlY6P0bPikme8UC,TixT0O52RBmL7KIIzdtN3m" IsHidden="true" />
+              <Patch Id="JGohUK2Fx54LTyuo36UTmA" Name="Create" />
+              <Patch Id="RdDcAPeEDquQZaVK1kFScf" Name="Update" ManuallySortedPins="true">
+                <Pin Id="OG6yNDLYo9XP7f4mpzVnjH" Name="Filename" Kind="InputPin" Bounds="539,265" DefaultValue="" Summary="The Prefetch file to read">
+                  <p:TypeAnnotation>
+                    <Choice Kind="TypeFlag" Name="Path" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="I2stvgnAlY6P0bPikme8UC" Name="Read" Kind="InputPin" Bounds="350,203" />
+                <Pin Id="I3uTz40vyKLMZBHutJbNH9" Name="Last Run Times" Kind="OutputPin" Bounds="526,562" Summary="Last times the prefetch's executable was run" />
+                <Pin Id="SwMWGZ2dEaPMxMxTePb9yM" Name="Run Count" Kind="OutputPin" Bounds="624,570" Summary="Number of times the prefetch's executable has been run" />
+                <Pin Id="AohH9OAK5wbPtDJegRtVhD" Name="Filenames" Kind="OutputPin" Bounds="710,574" Summary="Dlls used by the prefetch's executable" />
+                <Pin Id="T2YPkgnzvyaLK7ZcM1bXpr" Name="Executable Filename" Kind="OutputPin" Bounds="860,561" Summary="Filename of the prefetch's executable" />
+                <Pin Id="EsH7GbrHFMwMFCX8kXabae" Name="Volume Information" Kind="OutputPin" Bounds="841,712">
+                  <p:TypeAnnotation>
+                    <Choice Kind="TypeFlag" Name="VolumeInfo" />
+                    <FullNameCategoryReference ID="Blue.FileSystem.Prefetch" />
+                  </p:TypeAnnotation>
+                </Pin>
+              </Patch>
+              <Link Id="CLbcAZt7NZsLZU41cnnOvu" Ids="Da3BdDvZSKELwgzZjctAWW,Jn3Hyw6WicANACTeDPrrGM" />
+              <Link Id="Ps7Bi4LN817NnNe3SKCElp" Ids="P7cSadOAcIsNRBHAInoXjd,VGNwfGH2fhVPBmSyfYC3cd" IsFeedback="true" />
+              <Link Id="TzOBSWQvU6fMvGiPT28661" Ids="VGNwfGH2fhVPBmSyfYC3cd,BZhB8i55JZJN3C4A2wyO1i" />
+              <Link Id="MxYN3HfmQ1TPnHcKGko5FO" Ids="BZhB8i55JZJN3C4A2wyO1i,CiKQSF7WE7MMuc26MLZ6jB" />
+              <Link Id="FqrmbUi5Pe0MMS1IPG5lnj" Ids="CiKQSF7WE7MMuc26MLZ6jB,EsH7GbrHFMwMFCX8kXabae" IsHidden="true" />
+              <Link Id="FeLMYv5aq0uP7Hn6NtOgtI" Ids="Sxss3PnYAj2PGpr7IJRofx,IlRYcW4pF0eM4PShbqhcxE" />
+              <Link Id="SI6AoaXswTgQcRiCtt3Gu5" Ids="SqxLvbEaZOyLsL8Yg2ETV8,VGNwfGH2fhVPBmSyfYC3cd" />
+            </Patch>
+          </Node>
+          <!--
+
+    ************************ VolumeInfo ************************
+
+-->
+          <Node Name="VolumeInfo" Bounds="362,435" Id="EO2j8WiP1MkN5XyfrPKnGX">
+            <p:NodeReference>
+              <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <p:TypeAnnotation LastCategoryFullName="Prefetch.Other" LastSymbolSource="Prefetch.dll">
+              <Choice Kind="TypeFlag" Name="VolumeInfo" />
+            </p:TypeAnnotation>
+            <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
+            <Patch Id="OZyyS3YBhfnOcHgj6oAx7U">
+              <Canvas Id="HZXJcjzdbzUNv2E8UX4kil" CanvasType="Group">
+                <!--
+
+    ************************ Split ************************
+
+-->
+                <Node Name="Split" Bounds="439,461,624,183" Id="U3ulXFKqBWGOTe9eZrHjUT">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+                    <Choice Kind="OperationDefinition" Name="Operation" />
+                  </p:NodeReference>
+                  <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                  <Patch Id="ETKJEE56xcDL3OaCaAFp15" ManuallySortedPins="true">
+                    <Node Bounds="451,531,77,26" AutoConnect="true" Id="KJ6jnvvA5U0O2xJCBImfPX">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                        <Choice Kind="OperationNode" Name="CreationTime" />
+                        <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
+                      </p:NodeReference>
+                      <Pin Id="RisrGMd7U7zNuKMfJyLZvn" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="TaPSC5fO5zoP16xpmH3Cpa" Name="Creation Time" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="554,531,72,26" AutoConnect="true" Id="KcLCvF4CCsLPTJhoULGMjG">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                        <Choice Kind="OperationNode" Name="DeviceName" />
+                        <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
+                      </p:NodeReference>
+                      <Pin Id="PCRl5eLwTHWOxZfAKpMVkK" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="IkCK25N25L7MvsMteZRUy1" Name="Device Name" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="652,531,74,26" AutoConnect="true" Id="NCQzaMJ8DxnOB9ZrpglFwm">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                        <Choice Kind="OperationNode" Name="DeviceOffset" />
+                        <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
+                      </p:NodeReference>
+                      <Pin Id="RlZpZ13kKjuNqh1btIkwUf" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="Ndhiy1i4fjUOLxZ1ycyB40" Name="Device Offset" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="752,531,89,26" AutoConnect="true" Id="D9PtzmcLBilOOnJb9E800a">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                        <Choice Kind="OperationNode" Name="DirectoryNames" />
+                        <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
+                      </p:NodeReference>
+                      <Pin Id="GIYAR5nw2zJMXjNiBKNWr1" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="D89ZQosjUcFN1Hdg4nlzSs" Name="Directory Names" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="867,531,81,26" AutoConnect="true" Id="LBHtdFQyxYgMmDsoJ9nlgl">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                        <Choice Kind="OperationNode" Name="FileReferences" />
+                        <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
+                      </p:NodeReference>
+                      <Pin Id="Ao0QYa1IWVJPybtBy14bGE" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="Ur8c71mq9NFOIswoj1MnjC" Name="File References" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="974,531,77,26" AutoConnect="true" Id="SqButFEnwUBOMsmDoSsF5J">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                        <Choice Kind="OperationNode" Name="SerialNumber" />
+                        <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
+                      </p:NodeReference>
+                      <Pin Id="IsfAKFmzdRRMcGCOYIzUr6" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="LCg41J9KUzDMyROrtMmj8q" Name="Serial Number" Kind="OutputPin" />
+                    </Node>
+                    <ControlPoint Id="TZDVNZA0dDVNR7wZU7IL4U" Bounds="453,479" />
+                    <Link Id="AURUmILT2cXOF7QSX6WMW1" Ids="TZDVNZA0dDVNR7wZU7IL4U,RisrGMd7U7zNuKMfJyLZvn" />
+                    <Link Id="HIJNoyK3aHLQRM4rjOOz0b" Ids="L56xmyLtLQsOGqBt8HTwts,TZDVNZA0dDVNR7wZU7IL4U" IsHidden="true" />
+                    <Link Id="KuJ3vSYHhzpLFiOIlHIsKh" Ids="TZDVNZA0dDVNR7wZU7IL4U,PCRl5eLwTHWOxZfAKpMVkK" />
+                    <Link Id="U6n2BFk1O9QMopTihlll2h" Ids="TZDVNZA0dDVNR7wZU7IL4U,RlZpZ13kKjuNqh1btIkwUf" />
+                    <Link Id="Pxfxb1xGl6sN60x2TTS8da" Ids="TZDVNZA0dDVNR7wZU7IL4U,GIYAR5nw2zJMXjNiBKNWr1" />
+                    <Link Id="Pzhe56ouCdtMN4Y0uX9PBY" Ids="TZDVNZA0dDVNR7wZU7IL4U,Ao0QYa1IWVJPybtBy14bGE" />
+                    <Link Id="JNJcgiRWLMTNDvr2lzVNaW" Ids="TZDVNZA0dDVNR7wZU7IL4U,IsfAKFmzdRRMcGCOYIzUr6" />
+                    <Node Bounds="867,577,83,26" Id="UGh3K6DaEZGL21pT3ZdRRv">
+                      <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="FromSequence" />
+                        <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="J38eerEYQ3ZNDOJYriVaEX" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="M06LfkNoxmALi1pw29lKyJ" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Link Id="UJBlge59299Oyx4HYzfy0N" Ids="Ur8c71mq9NFOIswoj1MnjC,J38eerEYQ3ZNDOJYriVaEX" />
+                    <ControlPoint Id="PFTQ4rxep5YQFYYQRX0Yth" Bounds="869,627" />
+                    <Link Id="VK7KVvCfXenNRz4TUCXE6r" Ids="M06LfkNoxmALi1pw29lKyJ,PFTQ4rxep5YQFYYQRX0Yth" />
+                    <Link Id="RBSFl89oVyIPf5Hw92Z0Vq" Ids="PFTQ4rxep5YQFYYQRX0Yth,VZRMAwSf6ZqMqZrKTsmUTS" IsHidden="true" />
+                    <Pin Id="L56xmyLtLQsOGqBt8HTwts" Name="Input 2" Kind="InputPin" Bounds="610,448" />
+                    <Pin Id="KM5I2btBLuILqWlCvaqM0Q" Name="Creation Time" Kind="OutputPin" Bounds="19,22" />
+                    <Pin Id="GOSVuDtS5rcPgZi2Q3JYCH" Name="Device Name" Kind="OutputPin" Bounds="97,22" />
+                    <Pin Id="Fd2HQ8iENdOOQn1NIrnvZn" Name="Device Offset" Kind="OutputPin" Bounds="170,22" />
+                    <Pin Id="MJ5ebH6IX8ePCtdlwXhyO7" Name="Directory Names" Kind="OutputPin" Bounds="245,22" />
+                    <Pin Id="VZRMAwSf6ZqMqZrKTsmUTS" Name="File References" Kind="OutputPin" Bounds="868,622" />
+                    <Pin Id="ROPX4xYgEBUMMpyhesbPty" Name="Serial Number" Kind="OutputPin" Bounds="417,22" />
+                  </Patch>
+                </Node>
+              </Canvas>
+              <ProcessDefinition Id="SiX0GNVJGyoL0xg4LILRjF" IsHidden="true">
+                <Fragment Id="TqkBac3hb1iLZhYndwsK3W" Patch="U3ulXFKqBWGOTe9eZrHjUT" />
+              </ProcessDefinition>
+            </Patch>
+          </Node>
+        </Canvas>
       </Canvas>
     </Canvas>
     <!--
@@ -1095,8 +1441,9 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="QJDVUJTL4AzNI9wEYkBhQ7" Location="VL.CoreLib" Version="2021.3.3" />
+  <NugetDependency Id="QJDVUJTL4AzNI9wEYkBhQ7" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
   <NugetDependency Id="JPCA8zOFzuDQZbMhOUclMf" Location="Trinet.Core.IO.Ntfs" Version="4.1.1" />
   <PlatformDependency Id="BgM3If2THXqOLRhpGkV0DU" Location="System.IO" />
   <NugetDependency Id="SAYJjc5sNdfLUAfyLCIVrz" Location="Lnk" Version="1.2.0.3" />
+  <NugetDependency Id="U2UKeUtAW6TMIB5c3HwIOL" Location="Prefetch" Version="1.0.0" />
 </Document>
