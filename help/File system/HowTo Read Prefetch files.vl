@@ -28,7 +28,7 @@
             <Pin Id="UFB5STndyqoM4OYntgI1QT" Name="Executable Filename" Kind="OutputPin" />
             <Pin Id="OWMDfZdPkZwPrcZsmZxFgX" Name="Volume Information" Kind="OutputPin" />
           </Node>
-          <Pad Id="KYQY4M2DlYfQSYzum3davQ" Comment="Filename" Bounds="122,415,80,15" ShowValueBox="true" isIOBox="true" Value="C:\Users\seb\Desktop\SUBL.EXE-1424F858.pf">
+          <Pad Id="KYQY4M2DlYfQSYzum3davQ" Comment="Filename" Bounds="122,415,80,15" ShowValueBox="true" isIOBox="true" Value="">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
