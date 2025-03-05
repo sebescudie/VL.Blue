@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="L62qeA4ku0eNb9LFLQdXJn" LanguageVersion="2025.7.0-0184-g157d61ad29" Version="0.128">
+  <NugetDependency Id="RU5xbLoa9XxPoagsG3AGIC" Location="VL.CoreLib" Version="2025.7.0-0184-g157d61ad29" />
+  <Patch Id="KSVKpjxddocLe5YIRQtTW5">
+    <Canvas Id="HQsjnstUC7HM5LvgUcvFMb" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="TwbqGFH3HncK9voRwiLm8m">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="EUR9nPmDoQmQG1fY2ZzDYn">
+        <Canvas Id="T6OgBzZPJJFOr1KhljaQjN" CanvasType="Group">
+          <Node Bounds="237,280,53,19" Id="VFO3MEkz2woPkz8e8kQlV3">
+            <p:NodeReference LastCategoryFullName="Blue.Cryptography" LastDependency="VL.Blue.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SHA256" />
+            </p:NodeReference>
+            <Pin Id="PoicMyn3x6ELmBfbGvBjA2" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OCasD2tIOCFMPPn8CFro18" Name="Input" Kind="InputPin" />
+            <Pin Id="PffWspMt72VNA3Z1BHAzrW" Name="Calculate" Kind="InputPin" />
+            <Pin Id="QfwsyAwuvKNOxUtK3WEKsA" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FthbUFwpTaYLDsn6hJHjmX" Comment="" Bounds="239,221,140,15" ShowValueBox="true" isIOBox="true" Value="C:\Users\seb\Downloads\Memurai-Developer-v4.1.4.msi">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="LC0YG9uSDtqMdIn5Z3Wp3p" Comment="" Bounds="239,330,90,27" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="CR2JUEnUjQPPqRY31TgDTb" Comment="Calculate" Bounds="287,261,35,15" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="477,260,53,19" Id="BUBFJOD9WwOPoCcxLhVZNK">
+            <p:NodeReference LastCategoryFullName="Blue.Cryptography" LastDependency="VL.Blue.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SHA256 (Async)" />
+            </p:NodeReference>
+            <Pin Id="LnFkY2oN7xmLIfDekxoVGD" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="SYzLhzUVhwrOIpzv8yYzdK" Name="Input" Kind="InputPin" />
+            <Pin Id="G94waKvcdWoPCVIWe3S4tC" Name="Trigger" Kind="InputPin" />
+            <Pin Id="FqQDOblxluuMoJiDGTi5sg" Name="Result" Kind="OutputPin" />
+            <Pin Id="Ifb9P44pfaNMsyiY7WWkQm" Name="In Progress" Kind="OutputPin" />
+          </Node>
+          <Pad Id="GkwqpElWs2jPwho6MdTf6o" Bounds="470,199,168,39" ShowValueBox="true" isIOBox="true" Value="Also exists in Async and stateless flavors">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="477,310,80,80" Id="BDAuUXSCrSMMu9o8fHLtn4">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+            </p:NodeReference>
+            <Pin Id="K61vOW0QQhOLbQHvVlP1tl" Name="Force" Kind="InputPin" />
+            <Pin Id="AoPfD54BfRSMy8Bx1vdVIs" Name="Dispose Cached Outputs" Kind="InputPin" />
+            <Pin Id="PngnHtZ1xpGNGv7IYVbVJV" Name="Has Changed" Kind="OutputPin" />
+            <Patch Id="DCNkS0H3dyFPXKo1TdKx8B" ManuallySortedPins="true">
+              <Patch Id="J4x57SazujTQKfVWq10jOJ" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="KEDKWXZaf3ePTHPhrFj0Bb" Name="Then" ManuallySortedPins="true" />
+              <Node Bounds="491,342,53,19" Id="C8bmjAIrs8gPV4JlVditz3">
+                <p:NodeReference LastCategoryFullName="Blue.Cryptography" LastDependency="VL.Blue.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="SHA256" />
+                </p:NodeReference>
+                <Pin Id="N61rAOVMHazPeLjr0KS37W" Name="Input" Kind="InputPin" />
+                <Pin Id="ILyLyiL6fhxM17TkiLuSCN" Name="Output" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+        </Canvas>
+        <Patch Id="ONX5k6O2BPqPo94vvbeqnF" Name="Create" />
+        <Patch Id="GxRf6ulcOJrQJ6RKUCm5wo" Name="Update" />
+        <ProcessDefinition Id="M9hwjsP9rFbNOOUVITSRcp">
+          <Fragment Id="Mi70UNwhqFVMtf3ZKIqc7D" Patch="ONX5k6O2BPqPo94vvbeqnF" Enabled="true" />
+          <Fragment Id="Uc1yAesWAk8P2nM6wy2jg5" Patch="GxRf6ulcOJrQJ6RKUCm5wo" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="SgZXjsaVtHoQdYxYws3aA2" Ids="FthbUFwpTaYLDsn6hJHjmX,OCasD2tIOCFMPPn8CFro18" />
+        <Link Id="BcVWelUQkASLwONrKvTrsy" Ids="QfwsyAwuvKNOxUtK3WEKsA,LC0YG9uSDtqMdIn5Z3Wp3p" />
+        <Link Id="PROqZfnFCTEQGiQ10fGslC" Ids="CR2JUEnUjQPPqRY31TgDTb,PffWspMt72VNA3Z1BHAzrW" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="SKy8IvmjVrjLv2CmIz6edR" Location="VL.Blue" Version="0.0.0" />
+</Document>

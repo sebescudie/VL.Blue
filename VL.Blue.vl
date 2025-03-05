@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="ItbzroA06XpOzgSkGOBS0c" LanguageVersion="2021.4.0.526" Version="0.128">
-  <NugetDependency Id="TNQQodoeTIVOFqPalAxzLl" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="ItbzroA06XpOzgSkGOBS0c" LanguageVersion="2025.7.0-0184-g157d61ad29" Version="0.128">
+  <NugetDependency Id="TNQQodoeTIVOFqPalAxzLl" Location="VL.CoreLib" Version="2025.7.0-0184-g157d61ad29" />
   <Patch Id="GNkwL2ssMHEPRZfg8ey1K7">
     <Canvas Id="VclDbfBVE3jOiM6pVs3UX7" DefaultCategory="Blue" CanvasType="FullCategory">
       <Canvas Id="ONokeHYSTevPWAYG52Cemb" Name="FileSystem" Position="232,223">
@@ -10,14 +10,14 @@
 
 -->
         <Node Name="AlternateDataStreamReader" Bounds="546,364" Id="CN3eHm7IgJvPXhzCrBBmOb" Summary="Retrieves alternate data streams from files" Tags="ntfs,data,stream,alternate">
-          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
           <Patch Id="CIe68WuNwgTMvaqvQx8Jpz">
             <Canvas Id="DgnhJX1ePT5P0kFI2uAzHm" CanvasType="Group">
               <ControlPoint Id="OIaZ13q6a2WM1oTKR0a0Il" Bounds="248,198" />
               <Node Bounds="182,228,338,496" Id="D3Hx7kCa7NhQWSoULSJESq">
-                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                   <FullNameCategoryReference ID="Primitive" />
@@ -29,7 +29,7 @@
                   <Patch Id="RRgRYa1HYjVQRlJJnvf7c9" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="Ie8bdr649lWPpCJKpaPnlZ" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="246,251,55,19" Id="FCCt4yBY9wjPfkU0HsFsre">
-                    <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                    <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="CoreLibBasics.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="ToString" />
                     </p:NodeReference>
@@ -37,7 +37,7 @@
                     <Pin Id="NMid6t36wnUPOROEy3mRme" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="246,466,83,26" Id="AHdZYhu0PByMvno5VCvQCq">
-                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                    <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.Collections.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="RecordType" Name="Spread" />
                       <Choice Kind="OperationCallFlag" Name="FromSequence" />
@@ -46,7 +46,7 @@
                     <Pin Id="PuJ02BwZ7oQOLRjDGlsy3g" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="234,284,81,19" Id="HHYSTxK9ZCKN7e5dBPyqGW">
-                    <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
                     </p:NodeReference>
@@ -54,7 +54,7 @@
                     <Pin Id="UPbf2D2qRRvQJSUewJB7XP" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="234,357,155,80" Id="FkdCT361mklMUIR5WJJZmr">
-                    <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ApplicationStatefulRegion" Name="If" />
                       <FullNameCategoryReference ID="Primitive" />
@@ -64,7 +64,7 @@
                       <Patch Id="QvkA0J6mganNyBF4NQMfjC" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="RPEPx7KZZsGPNpp2iGb0tL" Name="Then" ManuallySortedPins="true" />
                       <Node Bounds="246,389,131,19" Id="UgILAS8DbYoOL9dgMlrcYB">
-                        <p:NodeReference LastCategoryFullName="Trinet.Core.IO.Ntfs.FileSystem" LastSymbolSource="Trinet.Core.IO.Ntfs.dll">
+                        <p:NodeReference LastCategoryFullName="Trinet.Core.IO.Ntfs.FileSystem" LastDependency="Trinet.Core.IO.Ntfs.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="Trinet" />
                           <CategoryReference Kind="AssemblyCategory" Name="Core" />
@@ -82,7 +82,7 @@
                     <ControlPoint Id="URMmhPECVq7N7dRD6ueAZB" Bounds="248,363" Alignment="Top" />
                   </Node>
                   <Node Bounds="234,319,37,19" Id="NAN4yScmhMFOlLWXBgVN9o">
-                    <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                    <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="CoreLibBasics.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="NOT" />
                     </p:NodeReference>
@@ -90,7 +90,7 @@
                     <Pin Id="GleRP6lLnLENL7s5p9pHWS" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Node Bounds="234,516,274,174" Id="K6i1bcslZGVOwr0YGKbcvV">
-                    <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                       <CategoryReference Kind="Category" Name="Primitive" />
@@ -102,7 +102,7 @@
                       <Patch Id="G32b9thZ454Qb6zwPoQwi3" Name="Update" ManuallySortedPins="true" />
                       <Patch Id="GXvptz30ePALKlg3dY72WN" Name="Dispose" ManuallySortedPins="true" />
                       <Node Bounds="391,555,104,26" Id="QKvPCP4Rwi7OoGPTRyqPTQ">
-                        <p:NodeReference LastCategoryFullName="Trinet.Core.IO.Ntfs.AlternateDataStreamInfo" LastSymbolSource="Trinet.Core.IO.Ntfs.dll">
+                        <p:NodeReference LastCategoryFullName="Trinet.Core.IO.Ntfs.AlternateDataStreamInfo" LastDependency="Trinet.Core.IO.Ntfs.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="AlternateDataStreamInfo" />
                           <Choice Kind="OperationCallFlag" Name="Name" />
@@ -112,7 +112,7 @@
                         <Pin Id="G885e9gJeDDQA4fHAIVwB8" Name="Name" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="246,555,104,26" Id="EFEMw3TP3S1MIt4MJhi4Tv">
-                        <p:NodeReference LastCategoryFullName="Trinet.Core.IO.Ntfs.AlternateDataStreamInfo" LastSymbolSource="Trinet.Core.IO.Ntfs.dll">
+                        <p:NodeReference LastCategoryFullName="Trinet.Core.IO.Ntfs.AlternateDataStreamInfo" LastDependency="Trinet.Core.IO.Ntfs.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="AlternateDataStreamInfo" />
                           <Choice Kind="OperationCallFlag" Name="OpenText" />
@@ -122,7 +122,7 @@
                         <Pin Id="Q4VNghmkWBMNQ1HSfwEvOH" Name="Result" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="345,609,67,26" Id="InMw4AGUflPNeJca9LL4YK">
-                        <p:NodeReference LastCategoryFullName="System.IO.StreamReader" LastSymbolSource="System.IO.dll">
+                        <p:NodeReference LastCategoryFullName="System.IO.StreamReader" LastDependency="System.IO.dll">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <CategoryReference Kind="AssemblyCategory" Name="StreamReader" />
                           <Choice Kind="OperationCallFlag" Name="ReadToEnd" />
@@ -132,7 +132,7 @@
                         <Pin Id="PukEe8QaQcQMrhptwTxpYQ" Name="Result" Kind="OutputPin" />
                       </Node>
                       <Node Bounds="345,644,58,26" Id="TfY7Z54ystaNyi4dbI2EUn">
-                        <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastSymbolSource="CoreLibBasics.vl">
+                        <p:NodeReference LastCategoryFullName="Primitive.IDisposable" LastDependency="CoreLibBasics.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="Dispose" />
                           <CategoryReference Kind="MutableInterfaceType" Name="IDisposable" NeedsToBeDirectParent="true" />
@@ -165,7 +165,7 @@
               <Pin Id="NPwAUbsaMW5N0fssbASWu8" Name="Output" Kind="OutputPin" Bounds="611,941" />
               <Pin Id="ISCzB4IYNz2LpXtoiL5b00" Name="Stream Name" Kind="OutputPin" Bounds="423,938" />
               <Pin Id="MJMj2gcNdOXO2vtQxJ0Yfr" Name="File Path" Kind="InputPin" Bounds="338,393" DefaultValue="">
-                <p:TypeAnnotation>
+                <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Path" />
                 </p:TypeAnnotation>
               </Pin>
@@ -200,13 +200,13 @@
 
 -->
           <Node Name="ShortcutReader" Bounds="418,294" Id="Hi6mEuYGEK9PBdw7MHHaic" Summary="Outputs basic information from a .lnk file, as well as an LnkFile object for further processing" Remarks="Path is of type string, because if you provide a Path to the .lnk, windows automagically loads the source file and not the .lnk itself">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="MnLM0ViYmH8MKeaG7xCBGL">
               <Canvas Id="Fog7y7RPiGNLf55ZbIeVE7" CanvasType="Group">
                 <Node Bounds="224,414,657,486" Id="UsHrbab267WP27IM2BKznN">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -225,7 +225,7 @@
                     <Patch Id="LojD78Ln76dPz8c8oHeayT" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="KpfugE6wz5UPflbL8RVjGp" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="332,434,537,398" Id="ImQSuP1Z17HLtdgJNtTS74">
-                      <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.Experimental.vl">
+                      <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.Experimental.vl">
                         <Choice Kind="ProcessAppFlag" Name="TryCatch (2Outputs)" />
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       </p:NodeReference>
@@ -248,11 +248,12 @@
                         <ControlPoint Id="AfWmOrRfuBVNb4qCWwqtm6" Bounds="659,825" />
                         <ControlPoint Id="BrhnEUHpravLZlpp3nzi1J" Bounds="776,806" />
                         <Node Bounds="344,757,290,26" Id="BfvlVwoNzbfMFJ1f1VCvqt">
-                          <p:NodeReference>
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.ShortcutReaderResult" LastDependency="VL.Blue.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="RecordType" Name="ShortcutReaderResult" />
                             <Choice Kind="OperationCallFlag" Name="Create" />
                           </p:NodeReference>
+                          <Pin Id="PinQsCdgOKaOIt5NwO1l6F" Name="Node Context" Kind="InputPin" IsHidden="true" />
                           <Pin Id="TvvMkP57w4lLWspBNaoOQm" Name="Lnk File" Kind="InputPin" />
                           <Pin Id="TDeevmaLHkrOcjRN1PoJbn" Name="Target File Path" Kind="InputPin" />
                           <Pin Id="V3f7IS8zNsJO3llZ1kEmPe" Name="Target Creation Date" Kind="InputPin" />
@@ -262,15 +263,16 @@
                           <Pin Id="STAdZ31H2OZMYdA4OrUqGg" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="344,457,54,19" Id="Scmf94b4oUhM3IbBWeSPi6">
-                          <p:NodeReference LastCategoryFullName="Lnk.Lnk" LastSymbolSource="Lnk.dll">
+                          <p:NodeReference LastCategoryFullName="Lnk.Lnk" LastDependency="Lnk.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="LoadFile" />
                           </p:NodeReference>
+                          <Pin Id="TEBtsoyjSjCMzvlTGwXsdH" Name="Path" Kind="InputPin" />
                           <Pin Id="DBBzthFHS22OlGz5YFQr75" Name="Lnk File" Kind="InputPin" />
                           <Pin Id="KghUqNcvbXbNyHundq4b4Y" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="344,494,59,26" Id="KVm3vL7iTKNOiNmAxGbs2V">
-                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.LnkFile" LastSymbolSource="VL.Blue.vl">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.LnkFile" LastDependency="VL.Blue.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="LocalPath" />
                           </p:NodeReference>
@@ -279,7 +281,7 @@
                           <Pin Id="JpU0G8Dtv0tMzx0sq6a0iZ" Name="Local Path" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="401,546,48,19" Id="VQnGpsG8fW7OMM62Z4xrGm">
-                          <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                          <p:NodeReference LastCategoryFullName="IO" LastDependency="CoreLibBasics.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="ToPath" />
                           </p:NodeReference>
@@ -287,7 +289,7 @@
                           <Pin Id="M5qR9J5TZeIPaeeMLtwUmd" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="443,494,49,26" Id="FguVn7Cy8MAPq5j0cH8npS">
-                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.LnkFile" LastSymbolSource="VL.Blue.vl">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.LnkFile" LastDependency="VL.Blue.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="Header" />
                           </p:NodeReference>
@@ -296,7 +298,7 @@
                           <Pin Id="KCnR80yaVfoPCGNIE4ZeDt" Name="Header" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="487,540,105,26" Id="HwxeARhY5ycPbzVtwv4kO6">
-                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastSymbolSource="VL.Blue.vl">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastDependency="VL.Blue.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="TargetCreationDate" />
                           </p:NodeReference>
@@ -305,7 +307,7 @@
                           <Pin Id="HT2rnEgE3odNCWtqfLJbNx" Name="Target Creation Date" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="487,583,127,26" Id="Mo9bBIA9monLbILIRzKPvo">
-                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastSymbolSource="VL.Blue.vl">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastDependency="VL.Blue.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="TargetLastAccessedDate" />
                           </p:NodeReference>
@@ -314,7 +316,7 @@
                           <Pin Id="NmvqJwiK2eZP5cH4b5fsYB" Name="Target Last Accessed Date" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="487,622,123,26" Id="LcVIWpvvXU9OMLlLWumIfb">
-                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastSymbolSource="VL.Blue.vl">
+                          <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.Header" LastDependency="VL.Blue.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="TargetModificationDate" />
                           </p:NodeReference>
@@ -323,7 +325,7 @@
                           <Pin Id="DIrWboBqulcOxsqSyoZUBM" Name="Target Modification Date" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="487,658,50,26" Id="IbVa45W5ZB1MF0EnjETXp5">
-                          <p:NodeReference LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+                          <p:NodeReference LastCategoryFullName="Lnk.Header" LastDependency="Lnk.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="FileSize" />
                             <CategoryReference Kind="AssemblyCategory" Name="Header" NeedsToBeDirectParent="true" />
@@ -333,7 +335,7 @@
                           <Pin Id="RQflfncopoOPBbf0SRSk8G" Name="File Size" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="629,721,52,19" Id="IBainIY7mZ7QUNvt5fa8Kc">
-                          <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                          <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="CoreLibBasics.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="ToInt32" />
                           </p:NodeReference>
@@ -341,12 +343,12 @@
                           <Pin Id="OcOUqjuN2DjOfCbGwax0tL" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Pad Id="AljluiHKvbnMZLbU1Nw9dU" Bounds="421,797,35,15" ShowValueBox="true" isIOBox="true" Value="Ok">
-                          <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                          <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                             <Choice Kind="TypeFlag" Name="String" />
                           </p:TypeAnnotation>
                         </Pad>
                         <Node Bounds="722,626,55,26" Id="IGXyGrHhYeXN4x31mBHwDu">
-                          <p:NodeReference LastCategoryFullName="Primitive.Exception" LastSymbolSource="CoreLibBasics.vl">
+                          <p:NodeReference LastCategoryFullName="Primitive.Exception" LastDependency="CoreLibBasics.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="ClassType" Name="Exception" />
                             <Choice Kind="OperationCallFlag" Name="Message" />
@@ -356,27 +358,30 @@
                           <Pin Id="QKa1v9tkrukLrSzq0qRJBF" Name="Message" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="799,712,58,26" Id="Rmw8MCxVH96LrgvwzqCRC9">
-                          <p:NodeReference LastCategoryFullName="System.Console" LastSymbolSource="CoreLibBasics.vl">
+                          <p:NodeReference LastCategoryFullName="System.Console" LastDependency="CoreLibBasics.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="WriteLine" />
                             <CategoryReference Kind="ClassType" Name="Console" NeedsToBeDirectParent="true" />
                           </p:NodeReference>
                           <Pin Id="J7DIHfoFlvXN6chclN4zp4" Name="Value" Kind="InputPin" />
                           <Pin Id="HywJxFXDQvmMM0vf6OxEIs" Name="Apply" Kind="InputPin" DefaultValue="True">
-                            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                               <Choice Kind="TypeFlag" Name="Boolean" />
                             </p:TypeAnnotation>
                           </Pin>
                         </Node>
                       </Patch>
+                      <Pin Id="E7O98bt3tBiMkLz2Kppzps" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                      <Pin Id="AOZihPRiI0pLjqQJLUFkJq" Name="Re Initialize" Kind="InputPin" IsHidden="true" />
                     </Node>
                     <Node Bounds="332,851,325,26" Id="HwpAgACs0PPMtHzyRWqztI">
-                      <p:NodeReference>
+                      <p:NodeReference LastCategoryFullName="Blue.FileSystem.Shortcut.ShortcutReaderResult" LastDependency="VL.Blue.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="RecordType" Name="ShortcutReaderResult" />
                         <Choice Kind="OperationCallFlag" Name="Split" />
                       </p:NodeReference>
                       <Pin Id="VQdg2Hkd63ULjOMhZDKqxG" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="R1FYkRLelEWMdKUdYUJDoc" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="JcqvtroNVa3QJmUvD771vN" Name="Lnk File" Kind="OutputPin" />
                       <Pin Id="MYtPfi173cnOU8xRBgzFzF" Name="Target File Path" Kind="OutputPin" />
                       <Pin Id="A5cF7ynG7lpNSrLSAHSgbo" Name="Target Creation Date" Kind="OutputPin" />
@@ -396,7 +401,7 @@
                 <ControlPoint Id="DjYkfSYex3iLOQ38zkBqVg" Bounds="654,1037" />
                 <ControlPoint Id="K8byowlJsfMMe7ahF9RTxV" Bounds="866,933" />
                 <Pad Id="BF3JVrlVwvdPfmJSBCs7uS" Comment="Dispose Cached Outputs" Bounds="868,358,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="Boolean" />
                   </p:TypeAnnotation>
                   <p:ValueBoxSettings>
@@ -409,7 +414,7 @@
                 <Pin Id="Q5LByBF2rllMxXgDWadWj2" Name="Path" Kind="InputPin" Bounds="383,321" Summary="The .lnk file to inspect" />
                 <Pin Id="LuSa1EOoRXZN2SSjaLwbKr" Name="Read" Kind="InputPin" Bounds="550,372" Summary="Reads the supplied .lnk file" />
                 <Pin Id="PJqjRiMoHEsNVO2bt238Gc" Name="Result" Kind="OutputPin" Bounds="249,1002" Summary="An LnkFile object for further processing">
-                  <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+                  <p:TypeAnnotation LastCategoryFullName="Lnk" LastDependency="Lnk.dll">
                     <Choice Kind="TypeFlag" Name="LnkFile" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -483,7 +488,7 @@
 
 -->
           <Node Name="ShortcutReaderResult" Aspects="Internal" Bounds="474,350" Id="BWsGJxaCv1HLeKCIPs7fpo">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="RecordDefinition" Name="Record" />
             </p:NodeReference>
             <Patch Id="A4BHy0utPMzPClIK9gUAkW">
@@ -593,7 +598,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="LnkFile" />
             </p:TypeAnnotation>
             <Patch Id="KzJErrhIgbHLUDuxvO5LOB">
@@ -611,7 +616,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="Header" />
             </p:TypeAnnotation>
             <Patch Id="EaxwSA9beBZOdMbHWVPE3H">
@@ -629,7 +634,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="NetworkShareInfo" />
             </p:TypeAnnotation>
             <Patch Id="GjdbGfCtUlnOL2VgDUbejb">
@@ -647,7 +652,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="DataFlag" />
             </p:TypeAnnotation>
             <Patch Id="N878Rcsqj33NY6ma7M4kRn">
@@ -665,7 +670,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.VolumeInfo" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.VolumeInfo" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="DriveTypes" />
             </p:TypeAnnotation>
             <Patch Id="IcgQRVJ3Ve0PMh2aOeA9PY">
@@ -683,7 +688,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="FileAttribute" />
             </p:TypeAnnotation>
             <Patch Id="Dq4mq4RmYW3LX3G3aQ8Nf2">
@@ -701,7 +706,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.LnkFile" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.LnkFile" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="LocationFlag" />
             </p:TypeAnnotation>
             <Patch Id="D0SxbzY1r1NOQeIxdVtE65">
@@ -719,7 +724,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.NetworkShareInfo" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.NetworkShareInfo" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ProviderType" />
             </p:TypeAnnotation>
             <Patch Id="M11BlMj5IB6P3MocpI0dwR">
@@ -737,7 +742,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.NetworkShareInfo" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.NetworkShareInfo" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ShareFlag" />
             </p:TypeAnnotation>
             <Patch Id="NbLuFSZgKSzNJLFZqv4Np4">
@@ -755,7 +760,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.Header" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ShowWindowOption" />
             </p:TypeAnnotation>
             <Patch Id="DWElhYUDVIZMk4321aqbXV">
@@ -773,7 +778,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="VolumeInfo" />
             </p:TypeAnnotation>
             <Patch Id="In9HmtNk5JoNu0rD8hG0VB">
@@ -793,7 +798,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ConsoleDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="HujFeKaajdnPciLZc2yFKm">
@@ -811,7 +816,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ConsoleFeDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="E23mag38A6tLa9tWb1DJgb">
@@ -829,7 +834,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="DamagedDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="U5DfKKzbzJ3OIUQ8Bmc0fG">
@@ -847,7 +852,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="DarwinDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="KtwOFtphmnRPbWygu5QaFy">
@@ -865,7 +870,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="EnvironmentVariableDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="RrkwC2g9LBKQasNHagmFUK">
@@ -883,7 +888,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="IconEnvironmentDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="VCu38g0X2ehLkWr9J94Kjh">
@@ -901,7 +906,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="KnownFolderDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="TyzL4ZwlxJZORG0iSQNoiP">
@@ -919,7 +924,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="PropertyStoreDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="IAv54aCz6nmOYnCmTrUH5o">
@@ -937,7 +942,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ShimDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="T92tKxtKwRQOv6WZ1JIxNK">
@@ -955,7 +960,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="SpecialFolderDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="MtLK1zJo4FDLl7y8Lmv1XX">
@@ -973,7 +978,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="TrackerDataBaseBlock" />
             </p:TypeAnnotation>
             <Patch Id="DQzKWNrPjsCPbl042q1mOG">
@@ -991,7 +996,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="VistaAndAboveIdListDataBlock" />
             </p:TypeAnnotation>
             <Patch Id="Gs31axqEju8O20S6nBAAyK">
@@ -1009,7 +1014,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="CursorWeight" />
             </p:TypeAnnotation>
             <Patch Id="MJgN05inSboOkXgOejdVCP">
@@ -1027,7 +1032,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="FillAttribute" />
             </p:TypeAnnotation>
             <Patch Id="Bc2wCAhHYz6PIIjeKD55Wr">
@@ -1045,7 +1050,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="FontFamily" />
             </p:TypeAnnotation>
             <Patch Id="I7C7VgoxkY1LBqDdTkw2zH">
@@ -1063,7 +1068,7 @@
               <Choice Kind="ForwardDefinition" Name="Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastSymbolSource="Lnk.dll">
+            <p:TypeAnnotation LastCategoryFullName="Lnk.ExtraData" LastDependency="Lnk.dll">
               <Choice Kind="TypeFlag" Name="ExtraDataBase" />
             </p:TypeAnnotation>
             <Patch Id="BFmvR159wseMaMsl9NeODJ">
@@ -1079,13 +1084,13 @@
 
 -->
           <Node Name="PrefetchReader" Bounds="359,381" Id="IDxVfqONcvEMS1TL1dlQli" Summary="Parses Prefetch files" Remarks="Uses Erik Zimmerman's Prefetch lib" Tags="forensics,blue">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
             <Patch Id="G6R8ZhMeM2WPk4U0LAzbZ8">
               <Canvas Id="RBzoXStNLyeLxAdYbiypTn" CanvasType="Group">
                 <Node Bounds="181,223,747,460" Id="GTMLTekDeRCPRG2huDpQcW">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                     <FullNameCategoryReference ID="Primitive" />
@@ -1097,7 +1102,7 @@
                     <Patch Id="UyKSYU5NNKFLvgRv3SgN1L" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="VzrvxkarEG3LxwPDJKk3id" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="216,246,55,19" Id="AIy8l4sJaRJMyLjVIwg7iV">
-                      <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                      <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="CoreLibBasics.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="ToString" />
                       </p:NodeReference>
@@ -1105,7 +1110,7 @@
                       <Pin Id="DRQWOqBPcIJQdpsEhZo21Y" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="204,346,712,218" Id="CCk9NoJzxX2LPSMkYfmfxG">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ApplicationStatefulRegion" Name="If" />
                         <CategoryReference Kind="Category" Name="Primitive" />
@@ -1115,7 +1120,7 @@
                         <Patch Id="B6xS1MgRgnjOmUOT8lTYSC" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="VLpMlMoQXVcMbtqNeriaFs" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="216,427,80,26" Id="AsmVJjtD2FfODZfsoNG8Vz">
-                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="Prefetch" />
                             <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
@@ -1126,7 +1131,7 @@
                           <Pin Id="BxxoOREl7o5LiaMeIt8xUh" Name="Last Run Times" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="334,429,61,26" Id="LTXpTODUH6KLXpuEfZBA3S">
-                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="Prefetch" />
                             <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
@@ -1137,7 +1142,7 @@
                           <Pin Id="JpqCwaxWgO8Oe5UlMY3rDI" Name="Run Count" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="432,431,62,26" Id="NuRyGPTHolXN55EnlffUfx">
-                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
                             <Choice Kind="OperationCallFlag" Name="Filenames" />
@@ -1147,7 +1152,7 @@
                           <Pin Id="QIg9nOzvs7ZOMSeqTf89n5" Name="Filenames" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="515,432,49,26" Id="JuubqXveiGkNT0KUSyAC2o">
-                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="Header" />
                             <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" NeedsToBeDirectParent="true" />
@@ -1157,7 +1162,7 @@
                           <Pin Id="DMr2PXyxPCSOyl8Zy5U6Iq" Name="Header" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="559,472,106,26" Id="C8O04zpAH5sPQbbVvt9SIE">
-                          <p:NodeReference LastCategoryFullName="Prefetch.Header" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.Header" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="ExecutableFilename" />
                           </p:NodeReference>
@@ -1166,7 +1171,7 @@
                           <Pin Id="L2mVNTe7AoxPabpUsb4Jyr" Name="Executable Filename" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="216,369,41,19" Id="JGaygN6Ly1COp1gJdPMUlC">
-                          <p:NodeReference LastCategoryFullName="Prefetch.PrefetchFile" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.PrefetchFile" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="PrefetchFile" />
                             <Choice Kind="OperationCallFlag" Name="Open" />
@@ -1175,7 +1180,7 @@
                           <Pin Id="Da3BdDvZSKELwgzZjctAWW" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="741,438,104,26" Id="PBKDaLBWZ9XOLCGdDjo4sd">
-                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastSymbolSource="Prefetch.dll">
+                          <p:NodeReference LastCategoryFullName="Prefetch.IPrefetch" LastDependency="Prefetch.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="Prefetch" />
                             <CategoryReference Kind="AssemblyCategory" Name="IPrefetch" />
@@ -1186,7 +1191,7 @@
                           <Pin Id="Sxss3PnYAj2PGpr7IJRofx" Name="Volume Information" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="840,497,57,26" Id="BCoeZf91JCYQMoyaHZzdQZ">
-                          <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastSymbolSource="VL.Collections.vl">
+                          <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastDependency="VL.Collections.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="ClassType" Name="MutableList" />
                             <Choice Kind="OperationCallFlag" Name="GetItem" />
@@ -1209,7 +1214,7 @@
                       <ControlPoint Id="P7cSadOAcIsNRBHAInoXjd" Bounds="841,352" Alignment="Top" />
                     </Node>
                     <Node Bounds="204,278,81,19" Id="Ey551ZSlqlUOewrrTFb7cV">
-                      <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                      <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
                       </p:NodeReference>
@@ -1217,7 +1222,7 @@
                       <Pin Id="HWF3CTTwhrOOkij7sQTkYG" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="204,310,37,19" Id="Mk86lycyQLnMLxJL4ALDBV">
-                      <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                      <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="CoreLibBasics.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="NOT" />
                       </p:NodeReference>
@@ -1281,7 +1286,7 @@
               <Patch Id="JGohUK2Fx54LTyuo36UTmA" Name="Create" />
               <Patch Id="RdDcAPeEDquQZaVK1kFScf" Name="Update" ManuallySortedPins="true">
                 <Pin Id="OG6yNDLYo9XP7f4mpzVnjH" Name="Filename" Kind="InputPin" Bounds="539,265" DefaultValue="" Summary="The Prefetch file to read">
-                  <p:TypeAnnotation>
+                  <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Path" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -1291,7 +1296,7 @@
                 <Pin Id="AohH9OAK5wbPtDJegRtVhD" Name="Filenames" Kind="OutputPin" Bounds="710,574" Summary="Dlls used by the prefetch's executable" />
                 <Pin Id="T2YPkgnzvyaLK7ZcM1bXpr" Name="Executable Filename" Kind="OutputPin" Bounds="860,561" Summary="Filename of the prefetch's executable" />
                 <Pin Id="EsH7GbrHFMwMFCX8kXabae" Name="Volume Information" Kind="OutputPin" Bounds="841,712">
-                  <p:TypeAnnotation>
+                  <p:TypeAnnotation LastCategoryFullName="Blue.FileSystem.Prefetch" LastDependency="VL.Blue.vl">
                     <Choice Kind="TypeFlag" Name="VolumeInfo" />
                     <FullNameCategoryReference ID="Blue.FileSystem.Prefetch" />
                   </p:TypeAnnotation>
@@ -1316,7 +1321,7 @@
               <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
               <FullNameCategoryReference ID="Primitive" />
             </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="Prefetch.Other" LastSymbolSource="Prefetch.dll">
+            <p:TypeAnnotation LastCategoryFullName="Prefetch.Other" LastDependency="Prefetch.dll">
               <Choice Kind="TypeFlag" Name="VolumeInfo" />
             </p:TypeAnnotation>
             <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
@@ -1328,57 +1333,63 @@
 
 -->
                 <Node Name="Split" Bounds="439,461,624,183" Id="U3ulXFKqBWGOTe9eZrHjUT">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
                     <Choice Kind="OperationDefinition" Name="Operation" />
                   </p:NodeReference>
                   <p:HideCategory p:Type="Boolean">false</p:HideCategory>
                   <Patch Id="ETKJEE56xcDL3OaCaAFp15" ManuallySortedPins="true">
                     <Node Bounds="451,531,77,26" AutoConnect="true" Id="KJ6jnvvA5U0O2xJCBImfPX">
-                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastDependency="Prefetch.dll">
                         <Choice Kind="OperationNode" Name="CreationTime" />
                         <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
                       </p:NodeReference>
                       <Pin Id="RisrGMd7U7zNuKMfJyLZvn" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="PC7CFw5QkvIOD0bQFb1hT9" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="TaPSC5fO5zoP16xpmH3Cpa" Name="Creation Time" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="554,531,72,26" AutoConnect="true" Id="KcLCvF4CCsLPTJhoULGMjG">
-                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastDependency="Prefetch.dll">
                         <Choice Kind="OperationNode" Name="DeviceName" />
                         <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
                       </p:NodeReference>
                       <Pin Id="PCRl5eLwTHWOxZfAKpMVkK" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="Dx2PAFpq2eHLobpiz7vi0r" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="IkCK25N25L7MvsMteZRUy1" Name="Device Name" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="652,531,74,26" AutoConnect="true" Id="NCQzaMJ8DxnOB9ZrpglFwm">
-                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastDependency="Prefetch.dll">
                         <Choice Kind="OperationNode" Name="DeviceOffset" />
                         <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
                       </p:NodeReference>
                       <Pin Id="RlZpZ13kKjuNqh1btIkwUf" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="F6Jv1tzfH5KPuN4qDt5Eed" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="Ndhiy1i4fjUOLxZ1ycyB40" Name="Device Offset" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="752,531,89,26" AutoConnect="true" Id="D9PtzmcLBilOOnJb9E800a">
-                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastDependency="Prefetch.dll">
                         <Choice Kind="OperationNode" Name="DirectoryNames" />
                         <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
                       </p:NodeReference>
                       <Pin Id="GIYAR5nw2zJMXjNiBKNWr1" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="DU6CArmo9O3NtEzNbMmNT9" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="D89ZQosjUcFN1Hdg4nlzSs" Name="Directory Names" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="867,531,81,26" AutoConnect="true" Id="LBHtdFQyxYgMmDsoJ9nlgl">
-                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastDependency="Prefetch.dll">
                         <Choice Kind="OperationNode" Name="FileReferences" />
                         <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
                       </p:NodeReference>
                       <Pin Id="Ao0QYa1IWVJPybtBy14bGE" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="TwjzqOtaGtQOh4N5WCVScm" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="Ur8c71mq9NFOIswoj1MnjC" Name="File References" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="974,531,77,26" AutoConnect="true" Id="SqButFEnwUBOMsmDoSsF5J">
-                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastSymbolSource="Prefetch.dll">
+                      <p:NodeReference LastCategoryFullName="Prefetch.Other.VolumeInfo" LastDependency="Prefetch.dll">
                         <Choice Kind="OperationNode" Name="SerialNumber" />
                         <FullNameCategoryReference ID="Prefetch.Other.VolumeInfo" />
                       </p:NodeReference>
                       <Pin Id="IsfAKFmzdRRMcGCOYIzUr6" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="I5nrobErYHtMw4E3qpoXJ3" Name="Output" Kind="OutputPin" IsHidden="true" />
                       <Pin Id="LCg41J9KUzDMyROrtMmj8q" Name="Serial Number" Kind="OutputPin" />
                     </Node>
                     <ControlPoint Id="TZDVNZA0dDVNR7wZU7IL4U" Bounds="453,479" />
@@ -1390,7 +1401,7 @@
                     <Link Id="Pzhe56ouCdtMN4Y0uX9PBY" Ids="TZDVNZA0dDVNR7wZU7IL4U,Ao0QYa1IWVJPybtBy14bGE" />
                     <Link Id="JNJcgiRWLMTNDvr2lzVNaW" Ids="TZDVNZA0dDVNR7wZU7IL4U,IsfAKFmzdRRMcGCOYIzUr6" />
                     <Node Bounds="867,577,83,26" Id="UGh3K6DaEZGL21pT3ZdRRv">
-                      <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                      <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.Collections.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="FromSequence" />
                         <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -1419,6 +1430,244 @@
           </Node>
         </Canvas>
       </Canvas>
+      <Canvas Id="BKGsAG4vrmeQIZsXuhhb2X" Name="Cryptography" Position="232,280">
+        <!--
+
+    ************************ SHA256 (Async) ************************
+
+-->
+        <Node Name="SHA256 (Async)" Bounds="290,210" Id="DHGHgNyPOjOMv6NWMhAvLL">
+          <p:NodeReference>
+            <Choice Kind="ContainerDefinition" />
+          </p:NodeReference>
+          <Patch Id="ObUtEwncXHlMFTicjbM8N8">
+            <Canvas Id="GNvmN94X2EVNOhfvToUvfr" CanvasType="Group">
+              <Node Bounds="597,182,91,86" Id="M7QKNhlHT0pNcBA6jDgQWT">
+                <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="AsyncTask" />
+                </p:NodeReference>
+                <Pin Id="VYErcGRb2esMA6KrOnpvB4" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="MkNmpXoR02GLkVLjpLZR9F" Name="Trigger" Kind="InputPin" />
+                <Pin Id="Vgg4OwmBY57LHT7AgGHZye" Name="Abort" Kind="InputPin" />
+                <Pin Id="AONFbHgSzLDMLb9ibi5nM6" Name="Result" Kind="OutputPin" />
+                <Pin Id="TneLQhu8dalOIDfwh5hfSz" Name="In Progress" Kind="OutputPin" />
+                <Patch Id="MSfROE9egOLPP7auxkVDdz" ManuallySortedPins="true">
+                  <Patch Id="McRJx08szswLb6h9ZuQMLU" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="FIh7jvMM7GpLuSogu4ukuM" Name="Update" ManuallySortedPins="true">
+                    <Pin Id="O6Fazne0EMpNVuPaAHBLxu" Name="Input 1" Kind="InputPin" />
+                    <Pin Id="FWW7S0urp0IOVK8sxEiGxF" Name="Output" Kind="OutputPin" />
+                  </Patch>
+                  <ControlPoint Id="KPf2dKMNoeSQCUXmP71kCj" Bounds="632,190" />
+                  <ControlPoint Id="GQtPe7pBHIQLa16DwU8HyR" Bounds="611,261" />
+                  <Node Bounds="609,210,53,19" Id="P9NfpBTITWUQMVkGHCozHS">
+                    <p:NodeReference LastCategoryFullName="Blue.Cryptography" LastDependency="VL.Blue.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Cryptography" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="SHA256" />
+                    </p:NodeReference>
+                    <Pin Id="SbnjCQoF6Y1PBM6ogN24LQ" Name="Input" Kind="InputPin" />
+                    <Pin Id="KTgcva87oubOyIwABSJKkZ" Name="Output" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+              </Node>
+              <ControlPoint Id="FLxqHURjEY3O7oM3sZrJZS" Bounds="599,130" />
+              <ControlPoint Id="P5jvhjlirIGPgFdR6Dl08L" Bounds="611,150" />
+              <ControlPoint Id="VzMCUXjnsazNyR5Bbj1YTv" Bounds="599,310" />
+              <ControlPoint Id="VMw7fU3oxbFMeLrRoeiXkY" Bounds="685,310" />
+            </Canvas>
+            <Patch Id="M9j3fRVREytOZ1Q3KT6iKC" Name="Create" />
+            <Patch Id="PNLw91MocoHMNLidUgQGkq" Name="Update" ManuallySortedPins="true">
+              <Pin Id="Ngj8iUKqRXlM6ZTilpUJ7n" Name="Input" Kind="InputPin" />
+              <Pin Id="KAoOUajCLZxNwuo08u9HPw" Name="Result" Kind="OutputPin" />
+              <Pin Id="IF9ts8xP6XwQDxyCsV9TaQ" Name="In Progress" Kind="OutputPin" />
+              <Pin Id="OmR0pDgVAAOQF7TRR4WqU1" Name="Trigger" Kind="InputPin" />
+            </Patch>
+            <ProcessDefinition Id="SCKcI9vIkjxNok7eJeHOjG">
+              <Fragment Id="GFUH7VAf1HgMZQcKKrvKfM" Patch="M9j3fRVREytOZ1Q3KT6iKC" Enabled="true" />
+              <Fragment Id="Olbd3P6xSzqPmAI6OR7Bgz" Patch="PNLw91MocoHMNLidUgQGkq" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="S8QWh83SwgiQB6dTCEnLyD" Ids="O6Fazne0EMpNVuPaAHBLxu,KPf2dKMNoeSQCUXmP71kCj" IsHidden="true" />
+            <Link Id="LclIDIjFAe7Nx7oJe1216p" Ids="GQtPe7pBHIQLa16DwU8HyR,FWW7S0urp0IOVK8sxEiGxF" IsHidden="true" />
+            <Link Id="Ru2avcrl4ffK9uK2ATFc2O" Ids="KTgcva87oubOyIwABSJKkZ,GQtPe7pBHIQLa16DwU8HyR" />
+            <Link Id="IlXB7yDGrbTOIlWVLZt1hk" Ids="FLxqHURjEY3O7oM3sZrJZS,MkNmpXoR02GLkVLjpLZR9F" />
+            <Link Id="SF0SJGysnKEL4mByrWLU0b" Ids="OmR0pDgVAAOQF7TRR4WqU1,FLxqHURjEY3O7oM3sZrJZS" IsHidden="true" />
+            <Link Id="Ft0hjTu910BLMick1Kr46V" Ids="P5jvhjlirIGPgFdR6Dl08L,SbnjCQoF6Y1PBM6ogN24LQ" />
+            <Link Id="Hou5NrEvhGsLXFcrtYHMO2" Ids="Ngj8iUKqRXlM6ZTilpUJ7n,P5jvhjlirIGPgFdR6Dl08L" IsHidden="true" />
+            <Link Id="HsuhylUBcFGPMdQ2vby7HL" Ids="AONFbHgSzLDMLb9ibi5nM6,VzMCUXjnsazNyR5Bbj1YTv" />
+            <Link Id="U3crIdHP93nNVwoyQCrkXR" Ids="VzMCUXjnsazNyR5Bbj1YTv,KAoOUajCLZxNwuo08u9HPw" IsHidden="true" />
+            <Link Id="KLfQYePC0SCOkshqPltLw5" Ids="TneLQhu8dalOIDfwh5hfSz,VMw7fU3oxbFMeLrRoeiXkY" />
+            <Link Id="GdKozfB1naZQNXNqnMLqaA" Ids="VMw7fU3oxbFMeLrRoeiXkY,IF9ts8xP6XwQDxyCsV9TaQ" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ SHA256 ************************
+
+-->
+        <Node Name="SHA256" Bounds="290,260" Id="QAwm0So3Gr4LHUQq4qGloR">
+          <p:NodeReference>
+            <Choice Kind="ContainerDefinition" />
+          </p:NodeReference>
+          <Patch Id="DMhiX0t0Y7xPqI1ynYR4YN">
+            <Canvas Id="VXyGdE8Xjo8OhB5a18QKXi" CanvasType="Group">
+              <Node Bounds="464,353,77,86" Id="ApZcr8AtxTLPFzRAvnTpYr">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                </p:NodeReference>
+                <Pin Id="NHF1rgjBBP0PNiuXrWVJt0" Name="Force" Kind="InputPin" />
+                <Pin Id="DEX6ewqsWh3LkLmPyQK2Az" Name="Dispose Cached Outputs" Kind="InputPin" />
+                <Pin Id="Bm5OFEof2EsPIR6Hx2ehiL" Name="Has Changed" Kind="OutputPin" />
+                <Patch Id="ObtmeTGAeJjMi60Xa5xfkY" ManuallySortedPins="true">
+                  <Patch Id="AlweTgn6wZZOxNLGhZnMWM" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="LAfgkoOnSaTL1BTlUTGPNh" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="476,390,53,19" Id="FmSPDSDzeNSNZeQBHv6Qeg">
+                    <p:NodeReference LastCategoryFullName="Blue.Cryptography" LastDependency="VL.Blue.vl" OverloadStrategy="UserSelectedPins">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Cryptography" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="SHA256" />
+                      <PinReference Kind="InputPin" Name="Input" />
+                    </p:NodeReference>
+                    <Pin Id="Li6zYzIodnFOnkVR3GzD7J" Name="Input" Kind="InputPin" />
+                    <Pin Id="QP2QjNY5rgLO985swogwbJ" Name="Output" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="LUjhdUgi1V0PHHhhZOmD8j" Bounds="478,433" Alignment="Bottom" />
+              </Node>
+              <ControlPoint Id="PSufo5WR0VoNAM4ssL1wgg" Bounds="478,301" />
+              <ControlPoint Id="GUPce1jiqCrOdYTPIPlRpP" Bounds="478,490" />
+              <ControlPoint Id="KoXzKlB0nHmN9qaflroZNb" Bounds="555,301" />
+            </Canvas>
+            <Patch Id="PE2EocJ3vA0OXv4W1hAIIC" Name="Create" />
+            <Patch Id="NWJhHaDTVJmN4y8Oa8EqTF" Name="Update">
+              <Pin Id="I8X9757PiBlLcJu53iuOoU" Name="Input" Kind="InputPin" />
+              <Pin Id="S6756PFbdVoNW2NU7gWSQn" Name="Output" Kind="OutputPin" />
+              <Pin Id="DXbIF1SWknwPvH2SKPBagf" Name="Calculate" Kind="InputPin" />
+            </Patch>
+            <!--
+
+    ************************  ************************
+
+-->
+            <ProcessDefinition Id="OAhDeU6LelMNTqA03ebVVe">
+              <Fragment Id="QZZhmMG9ZL7QIbDO4lry0n" Patch="PE2EocJ3vA0OXv4W1hAIIC" Enabled="true" />
+              <Fragment Id="QAUUrnRkpPtMtWGBXn0bHJ" Patch="NWJhHaDTVJmN4y8Oa8EqTF" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="QXGd93yMa64PvtPEgoQtjo" Ids="I8X9757PiBlLcJu53iuOoU,PSufo5WR0VoNAM4ssL1wgg" IsHidden="true" />
+            <Link Id="GrJKFXjKS0rOqxEu9pT7hR" Ids="QP2QjNY5rgLO985swogwbJ,LUjhdUgi1V0PHHhhZOmD8j" />
+            <Link Id="GDPf0fC7rTYOBS7Qjd09Ed" Ids="LUjhdUgi1V0PHHhhZOmD8j,GUPce1jiqCrOdYTPIPlRpP" />
+            <Link Id="FeTokyxkkQkOYCBHZMl1AV" Ids="GUPce1jiqCrOdYTPIPlRpP,S6756PFbdVoNW2NU7gWSQn" IsHidden="true" />
+            <Link Id="HMwMyCYuMkWOTvnDsVgoML" Ids="PSufo5WR0VoNAM4ssL1wgg,Li6zYzIodnFOnkVR3GzD7J" />
+            <Link Id="TBOmRbc4GRsQNanXlTCDCE" Ids="KoXzKlB0nHmN9qaflroZNb,NHF1rgjBBP0PNiuXrWVJt0" />
+            <Link Id="BHTsFg5qZJ9PwArikUfgI0" Ids="DXbIF1SWknwPvH2SKPBagf,KoXzKlB0nHmN9qaflroZNb" IsHidden="true" />
+          </Patch>
+        </Node>
+        <Canvas Id="Tf9228z51QxMNPEAl2m26K" Name="Advanced" Position="291,150">
+          <!--
+
+    ************************ SHA256 ************************
+
+-->
+          <Node Name="SHA256" Bounds="427,260,208,335" Id="Pt3HtX7QzKDMji8u0bxN0i">
+            <p:NodeReference>
+              <Choice Kind="OperationDefinition" />
+            </p:NodeReference>
+            <Patch Id="Bw6GaWlc17BP64F8g5NNmg">
+              <Node Bounds="469,365,154,189" Id="BBvCYpINXpNNGGCaZAIliA">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="Using" />
+                </p:NodeReference>
+                <Patch Id="DfyNgZ529EgMgNNOyQq6bm" ManuallySortedPins="true">
+                  <Patch Id="AH6hGwUpnTYNEmp9tJjirw" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="Hmo6PXBWGxNQAacIuftZhM" Name="Update" ManuallySortedPins="true" />
+                  <Node Bounds="481,388,46,26" Id="Ux7at0dNFhPN3uMKUqEFel">
+                    <p:NodeReference LastCategoryFullName="System.Security.Cryptography.SHA256" LastDependency="System.Security.Cryptography.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="SHA256" />
+                      <Choice Kind="OperationCallFlag" Name="Create" />
+                    </p:NodeReference>
+                    <Pin Id="HdUQMpfZl4iMCa0GMDOINz" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="481,428,80,26" Id="NrPVrRUSTuKNb2qX0S38x2">
+                    <p:NodeReference LastCategoryFullName="System.Security.Cryptography.HashAlgorithm" LastDependency="System.Security.Cryptography.dll" OverloadStrategy="UserSelectedPins">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <FullNameCategoryReference ID="System.Security.Cryptography.HashAlgorithm" />
+                      <Choice Kind="OperationCallFlag" Name="ComputeHash" />
+                      <PinReference Kind="InputPin" Name="Input Stream" />
+                    </p:NodeReference>
+                    <Pin Id="NGp64JHh0JCQbx0eX07gYB" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="E7PJrxW4BW1PKVWQKQABT1" Name="Input Stream" Kind="InputPin" />
+                    <Pin Id="PjbIJz2KLuJOWRJixQmFZd" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="TddQGLpJBHvLLHXSp6IWic" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="556,468,55,19" Id="GMQ6XP8m4xXL0eRSRMBJCm">
+                    <p:NodeReference LastCategoryFullName="System.BitConverter" LastDependency="System.Runtime.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="BitConverter" />
+                      <Choice Kind="OperationCallFlag" Name="ToString" />
+                    </p:NodeReference>
+                    <Pin Id="Pg7tWUtABQOOWE62EQF5vS" Name="Value" Kind="InputPin" />
+                    <Pin Id="OLX9OGCAjBhMzEp88SFZ7f" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="556,508,51,26" Id="Gi2VvJP7viVMoJTrURODDP">
+                    <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="Replace" />
+                    </p:NodeReference>
+                    <Pin Id="TQccyfOoPDUQNeCVOiJvRt" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="UgP3SigvZ8ZMUAKalo0sbG" Name="Old Value" Kind="InputPin" DefaultValue="-" />
+                    <Pin Id="FUXc6ben4bPPmZ4ZVVeatv" Name="New Value" Kind="InputPin" />
+                    <Pin Id="TEJXi8tuuj0NvZJri7VYCW" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="CBUy3tMrzQXLy5nEZbbrOr" Bounds="558,548" Alignment="Bottom" />
+                <ControlPoint Id="FeqnHzHQEq2PCObUcyvSmq" Bounds="558,371" Alignment="Top" />
+              </Node>
+              <Link Id="HCy3O3A4lBcPEX85ZFy55d" Ids="HdUQMpfZl4iMCa0GMDOINz,NGp64JHh0JCQbx0eX07gYB" />
+              <Link Id="S7cvFpR7BWZLVcPuko8a19" Ids="TddQGLpJBHvLLHXSp6IWic,Pg7tWUtABQOOWE62EQF5vS" />
+              <Link Id="NiWCUNcRRanL0bZL77WXUg" Ids="OLX9OGCAjBhMzEp88SFZ7f,TQccyfOoPDUQNeCVOiJvRt" />
+              <Link Id="ExATrpwmLdoPCZDiCZa324" Ids="TEJXi8tuuj0NvZJri7VYCW,CBUy3tMrzQXLy5nEZbbrOr" />
+              <Link Id="GVrOJRH7hIaMElK4oRa4Uk" Ids="CBUy3tMrzQXLy5nEZbbrOr,Ke6Wv9mVxn2PmQQ0hgntSN" />
+              <ControlPoint Id="Ke6Wv9mVxn2PmQQ0hgntSN" Bounds="558,578" />
+              <Pin Id="S1cCRxhrswYMpsO4NdrEHr" Name="Output" Kind="OutputPin" />
+              <Link Id="C0GHCrrRbdLOJVYpKs1e1r" Ids="Ke6Wv9mVxn2PmQQ0hgntSN,S1cCRxhrswYMpsO4NdrEHr" IsHidden="true" />
+              <Node Bounds="556,328,63,19" Id="QWjZ3Z9egcEPWXgmWlXHDe">
+                <p:NodeReference LastCategoryFullName="System.IO.File" LastDependency="System.Runtime.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="File" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="OpenRead" />
+                </p:NodeReference>
+                <Pin Id="PkPoos2VAU8LdrhDHPl0X2" Name="Path" Kind="InputPin" />
+                <Pin Id="MQ3CLlaOPoSQDqDsdzVnRR" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Link Id="An507Y2EXIDNp4qvB8Qflr" Ids="MQ3CLlaOPoSQDqDsdzVnRR,FeqnHzHQEq2PCObUcyvSmq" />
+              <Link Id="NYMMOeg2oz2OGt43ZBeFfi" Ids="FeqnHzHQEq2PCObUcyvSmq,E7PJrxW4BW1PKVWQKQABT1" />
+              <Node Bounds="556,299,55,19" Id="PlVYLeIdOzjNXirlIrjN8X">
+                <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="ToString" />
+                </p:NodeReference>
+                <Pin Id="RdTRQN8gAK0P0LnJBaBgv7" Name="Input" Kind="InputPin" />
+                <Pin Id="UlrScRyfj4pNEcnGkFouLM" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Link Id="KptxexIVH7oMv3TjU289pb" Ids="UlrScRyfj4pNEcnGkFouLM,PkPoos2VAU8LdrhDHPl0X2" />
+              <ControlPoint Id="U7oUZDSiq0dM0HhUwIjaLm" Bounds="558,278" />
+              <Link Id="NUYUurUMMpqMcSO22kvF9d" Ids="U7oUZDSiq0dM0HhUwIjaLm,RdTRQN8gAK0P0LnJBaBgv7" />
+              <Pin Id="H4xZo2eXvfmNLdNS772rk5" Name="Input" Kind="InputPin">
+                <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Path" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Link Id="HHggOMKeFnONl72BxOlfBj" Ids="H4xZo2eXvfmNLdNS772rk5,U7oUZDSiq0dM0HhUwIjaLm" IsHidden="true" />
+            </Patch>
+          </Node>
+        </Canvas>
+      </Canvas>
     </Canvas>
     <!--
 
@@ -1441,9 +1690,10 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="QJDVUJTL4AzNI9wEYkBhQ7" Location="VL.CoreLib" Version="2021.4.0-0526-gd606d93626" />
   <NugetDependency Id="JPCA8zOFzuDQZbMhOUclMf" Location="Trinet.Core.IO.Ntfs" Version="4.1.1" />
   <PlatformDependency Id="BgM3If2THXqOLRhpGkV0DU" Location="System.IO" />
-  <NugetDependency Id="SAYJjc5sNdfLUAfyLCIVrz" Location="Lnk" Version="1.2.0.3" />
-  <NugetDependency Id="U2UKeUtAW6TMIB5c3HwIOL" Location="Prefetch" Version="1.0.0" />
+  <NugetDependency Id="SAYJjc5sNdfLUAfyLCIVrz" Location="Lnk" Version="1.5.0" />
+  <NugetDependency Id="U2UKeUtAW6TMIB5c3HwIOL" Location="Prefetch" Version="1.3.0" />
+  <PlatformDependency Id="OTYMou1LDIPL6ihhyNdRZV" Location="System.Security.Cryptography" />
+  <PlatformDependency Id="J7JOVODDtxcMnWTVaaNCDt" Location="System.Runtime" />
 </Document>
